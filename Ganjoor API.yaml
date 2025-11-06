@@ -1,0 +1,2794 @@
+openapi: 3.0.3
+info:
+  title: Ganjoor API
+  version: 1.0.0
+  description: A comprehensive API for browsing Persian poetry
+paths:
+  /api/audio-syncs/:
+    get:
+      operationId: audio_syncs_list
+      description: |-
+        ViewSet for managing audio synchronization data.
+
+        Provides CRUD operations for audio sync points.
+      parameters:
+      - in: query
+        name: audio
+        schema:
+          type: integer
+      - name: ordering
+        required: false
+        in: query
+        description: کدام فیلد باید هنگام مرتب‌سازی نتایج استفاده شود.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: یک شماره صفحه‌ در مجموعه نتایج صفحه‌بندی شده.
+        schema:
+          type: integer
+      - in: query
+        name: poem
+        schema:
+          type: integer
+      tags:
+      - audio-syncs
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedGanjoorAudioSyncList'
+          description: ''
+    post:
+      operationId: audio_syncs_create
+      description: |-
+        ViewSet for managing audio synchronization data.
+
+        Provides CRUD operations for audio sync points.
+      tags:
+      - audio-syncs
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GanjoorAudioSyncRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/GanjoorAudioSyncRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/GanjoorAudioSyncRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorAudioSync'
+          description: ''
+  /api/audio-syncs/{id}/:
+    get:
+      operationId: audio_syncs_retrieve
+      description: |-
+        ViewSet for managing audio synchronization data.
+
+        Provides CRUD operations for audio sync points.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این Audio Sync را شناسایی میکند.
+        required: true
+      tags:
+      - audio-syncs
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorAudioSync'
+          description: ''
+    put:
+      operationId: audio_syncs_update
+      description: |-
+        ViewSet for managing audio synchronization data.
+
+        Provides CRUD operations for audio sync points.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این Audio Sync را شناسایی میکند.
+        required: true
+      tags:
+      - audio-syncs
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GanjoorAudioSyncRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/GanjoorAudioSyncRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/GanjoorAudioSyncRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorAudioSync'
+          description: ''
+    patch:
+      operationId: audio_syncs_partial_update
+      description: |-
+        ViewSet for managing audio synchronization data.
+
+        Provides CRUD operations for audio sync points.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این Audio Sync را شناسایی میکند.
+        required: true
+      tags:
+      - audio-syncs
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedGanjoorAudioSyncRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedGanjoorAudioSyncRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedGanjoorAudioSyncRequest'
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorAudioSync'
+          description: ''
+    delete:
+      operationId: audio_syncs_destroy
+      description: |-
+        ViewSet for managing audio synchronization data.
+
+        Provides CRUD operations for audio sync points.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این Audio Sync را شناسایی میکند.
+        required: true
+      tags:
+      - audio-syncs
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/audios/:
+    get:
+      operationId: audios_list
+      description: |-
+        ViewSet for managing poem audio files.
+
+        Provides CRUD operations for audio files with filtering.
+      parameters:
+      - in: query
+        name: is_direct
+        schema:
+          type: boolean
+      - in: query
+        name: is_uploaded
+        schema:
+          type: boolean
+      - name: ordering
+        required: false
+        in: query
+        description: کدام فیلد باید هنگام مرتب‌سازی نتایج استفاده شود.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: یک شماره صفحه‌ در مجموعه نتایج صفحه‌بندی شده.
+        schema:
+          type: integer
+      - in: query
+        name: poem
+        schema:
+          type: integer
+      tags:
+      - audios
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedGanjoorPoemAudioList'
+          description: ''
+    post:
+      operationId: audios_create
+      description: |-
+        ViewSet for managing poem audio files.
+
+        Provides CRUD operations for audio files with filtering.
+      tags:
+      - audios
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GanjoorPoemAudioRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/GanjoorPoemAudioRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/GanjoorPoemAudioRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorPoemAudio'
+          description: ''
+  /api/audios/{id}/:
+    get:
+      operationId: audios_retrieve
+      description: |-
+        ViewSet for managing poem audio files.
+
+        Provides CRUD operations for audio files with filtering.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این Poem Audio را شناسایی میکند.
+        required: true
+      tags:
+      - audios
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorPoemAudio'
+          description: ''
+    put:
+      operationId: audios_update
+      description: |-
+        ViewSet for managing poem audio files.
+
+        Provides CRUD operations for audio files with filtering.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این Poem Audio را شناسایی میکند.
+        required: true
+      tags:
+      - audios
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GanjoorPoemAudioRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/GanjoorPoemAudioRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/GanjoorPoemAudioRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorPoemAudio'
+          description: ''
+    patch:
+      operationId: audios_partial_update
+      description: |-
+        ViewSet for managing poem audio files.
+
+        Provides CRUD operations for audio files with filtering.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این Poem Audio را شناسایی میکند.
+        required: true
+      tags:
+      - audios
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedGanjoorPoemAudioRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedGanjoorPoemAudioRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedGanjoorPoemAudioRequest'
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorPoemAudio'
+          description: ''
+    delete:
+      operationId: audios_destroy
+      description: |-
+        ViewSet for managing poem audio files.
+
+        Provides CRUD operations for audio files with filtering.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این Poem Audio را شناسایی میکند.
+        required: true
+      tags:
+      - audios
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/categories/:
+    get:
+      operationId: categories_list
+      description: |-
+        ViewSet for managing categories.
+
+        Provides CRUD operations for categories with filtering and search.
+      parameters:
+      - name: ordering
+        required: false
+        in: query
+        description: کدام فیلد باید هنگام مرتب‌سازی نتایج استفاده شود.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: یک شماره صفحه‌ در مجموعه نتایج صفحه‌بندی شده.
+        schema:
+          type: integer
+      - in: query
+        name: parent
+        schema:
+          type: integer
+      - in: query
+        name: poet
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: یک عبارت جستجو.
+        schema:
+          type: string
+      tags:
+      - categories
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedGanjoorCategoryListList'
+          description: ''
+    post:
+      operationId: categories_create
+      description: |-
+        ViewSet for managing categories.
+
+        Provides CRUD operations for categories with filtering and search.
+      tags:
+      - categories
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GanjoorCategoryRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/GanjoorCategoryRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/GanjoorCategoryRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorCategory'
+          description: ''
+  /api/categories/{id}/:
+    get:
+      operationId: categories_retrieve
+      description: |-
+        ViewSet for managing categories.
+
+        Provides CRUD operations for categories with filtering and search.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این Category را شناسایی میکند.
+        required: true
+      tags:
+      - categories
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorCategory'
+          description: ''
+    put:
+      operationId: categories_update
+      description: |-
+        ViewSet for managing categories.
+
+        Provides CRUD operations for categories with filtering and search.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این Category را شناسایی میکند.
+        required: true
+      tags:
+      - categories
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GanjoorCategoryRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/GanjoorCategoryRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/GanjoorCategoryRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorCategory'
+          description: ''
+    patch:
+      operationId: categories_partial_update
+      description: |-
+        ViewSet for managing categories.
+
+        Provides CRUD operations for categories with filtering and search.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این Category را شناسایی میکند.
+        required: true
+      tags:
+      - categories
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedGanjoorCategoryRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedGanjoorCategoryRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedGanjoorCategoryRequest'
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorCategory'
+          description: ''
+    delete:
+      operationId: categories_destroy
+      description: |-
+        ViewSet for managing categories.
+
+        Provides CRUD operations for categories with filtering and search.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این Category را شناسایی میکند.
+        required: true
+      tags:
+      - categories
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/categories/{id}/poems/:
+    get:
+      operationId: categories_poems_retrieve
+      description: Get all poems in a specific category.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این Category را شناسایی میکند.
+        required: true
+      tags:
+      - categories
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorCategory'
+          description: ''
+  /api/categories/{id}/subcategories/:
+    get:
+      operationId: categories_subcategories_retrieve
+      description: Get all subcategories of a specific category.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این Category را شناسایی میکند.
+        required: true
+      tags:
+      - categories
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorCategory'
+          description: ''
+  /api/favorites/:
+    get:
+      operationId: favorites_list
+      description: |-
+        ViewSet for managing user favorites.
+
+        Users can only view and manage their own favorites.
+      parameters:
+      - name: ordering
+        required: false
+        in: query
+        description: کدام فیلد باید هنگام مرتب‌سازی نتایج استفاده شود.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: یک شماره صفحه‌ در مجموعه نتایج صفحه‌بندی شده.
+        schema:
+          type: integer
+      tags:
+      - favorites
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedGanjoorFavoriteList'
+          description: ''
+    post:
+      operationId: favorites_create
+      description: |-
+        ViewSet for managing user favorites.
+
+        Users can only view and manage their own favorites.
+      tags:
+      - favorites
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GanjoorFavoriteRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/GanjoorFavoriteRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/GanjoorFavoriteRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorFavorite'
+          description: ''
+  /api/favorites/{id}/:
+    get:
+      operationId: favorites_retrieve
+      description: |-
+        ViewSet for managing user favorites.
+
+        Users can only view and manage their own favorites.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - favorites
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorFavorite'
+          description: ''
+    put:
+      operationId: favorites_update
+      description: |-
+        ViewSet for managing user favorites.
+
+        Users can only view and manage their own favorites.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - favorites
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GanjoorFavoriteRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/GanjoorFavoriteRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/GanjoorFavoriteRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorFavorite'
+          description: ''
+    patch:
+      operationId: favorites_partial_update
+      description: |-
+        ViewSet for managing user favorites.
+
+        Users can only view and manage their own favorites.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - favorites
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedGanjoorFavoriteRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedGanjoorFavoriteRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedGanjoorFavoriteRequest'
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorFavorite'
+          description: ''
+    delete:
+      operationId: favorites_destroy
+      description: |-
+        ViewSet for managing user favorites.
+
+        Users can only view and manage their own favorites.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - favorites
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/favorites/toggle/:
+    post:
+      operationId: favorites_toggle_create
+      description: |-
+        Toggle a favorite (add if doesn't exist, remove if exists).
+
+        Request body:
+            - poem: poem ID
+            - verse: verse ID
+      tags:
+      - favorites
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GanjoorFavoriteRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/GanjoorFavoriteRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/GanjoorFavoriteRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorFavorite'
+          description: ''
+  /api/poems/:
+    get:
+      operationId: poems_list
+      description: |-
+        ViewSet for managing poems.
+
+        Provides CRUD operations for poems with filtering and search.
+      parameters:
+      - in: query
+        name: category
+        schema:
+          type: integer
+      - in: query
+        name: category__poet
+        schema:
+          type: integer
+      - name: ordering
+        required: false
+        in: query
+        description: کدام فیلد باید هنگام مرتب‌سازی نتایج استفاده شود.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: یک شماره صفحه‌ در مجموعه نتایج صفحه‌بندی شده.
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: یک عبارت جستجو.
+        schema:
+          type: string
+      tags:
+      - poems
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedGanjoorPoemListList'
+          description: ''
+    post:
+      operationId: poems_create
+      description: |-
+        ViewSet for managing poems.
+
+        Provides CRUD operations for poems with filtering and search.
+      tags:
+      - poems
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GanjoorPoemRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/GanjoorPoemRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/GanjoorPoemRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorPoem'
+          description: ''
+  /api/poems/{id}/:
+    get:
+      operationId: poems_retrieve
+      description: |-
+        ViewSet for managing poems.
+
+        Provides CRUD operations for poems with filtering and search.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این Poem را شناسایی میکند.
+        required: true
+      tags:
+      - poems
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorPoem'
+          description: ''
+    put:
+      operationId: poems_update
+      description: |-
+        ViewSet for managing poems.
+
+        Provides CRUD operations for poems with filtering and search.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این Poem را شناسایی میکند.
+        required: true
+      tags:
+      - poems
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GanjoorPoemRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/GanjoorPoemRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/GanjoorPoemRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorPoem'
+          description: ''
+    patch:
+      operationId: poems_partial_update
+      description: |-
+        ViewSet for managing poems.
+
+        Provides CRUD operations for poems with filtering and search.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این Poem را شناسایی میکند.
+        required: true
+      tags:
+      - poems
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedGanjoorPoemRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedGanjoorPoemRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedGanjoorPoemRequest'
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorPoem'
+          description: ''
+    delete:
+      operationId: poems_destroy
+      description: |-
+        ViewSet for managing poems.
+
+        Provides CRUD operations for poems with filtering and search.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این Poem را شناسایی میکند.
+        required: true
+      tags:
+      - poems
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/poems/{id}/verses/:
+    get:
+      operationId: poems_verses_retrieve
+      description: Get all verses for a specific poem.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این Poem را شناسایی میکند.
+        required: true
+      tags:
+      - poems
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorPoem'
+          description: ''
+  /api/poems/search/:
+    get:
+      operationId: poems_search_retrieve
+      description: |-
+        Search poems by title or verse content.
+
+        Query params:
+            - q: search query
+            - poet: filter by poet ID
+      tags:
+      - poems
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorPoem'
+          description: ''
+  /api/poets/:
+    get:
+      operationId: poets_list
+      description: |-
+        ViewSet for managing poets.
+
+        Provides CRUD operations for poets with filtering and search.
+      parameters:
+      - in: query
+        name: century
+        schema:
+          type: string
+          enum:
+          - ancient
+          - classical
+          - contemporary
+          - modern
+        description: |-
+          * `ancient` - Ancient
+          * `classical` - Classical
+          * `contemporary` - Contemporary
+          * `modern` - Modern
+      - name: ordering
+        required: false
+        in: query
+        description: کدام فیلد باید هنگام مرتب‌سازی نتایج استفاده شود.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: یک شماره صفحه‌ در مجموعه نتایج صفحه‌بندی شده.
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: یک عبارت جستجو.
+        schema:
+          type: string
+      tags:
+      - poets
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedGanjoorPoetListList'
+          description: ''
+    post:
+      operationId: poets_create
+      description: |-
+        ViewSet for managing poets.
+
+        Provides CRUD operations for poets with filtering and search.
+      tags:
+      - poets
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GanjoorPoetRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/GanjoorPoetRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/GanjoorPoetRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorPoet'
+          description: ''
+  /api/poets/{id}/:
+    get:
+      operationId: poets_retrieve
+      description: |-
+        ViewSet for managing poets.
+
+        Provides CRUD operations for poets with filtering and search.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این Poet را شناسایی میکند.
+        required: true
+      tags:
+      - poets
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorPoet'
+          description: ''
+    put:
+      operationId: poets_update
+      description: |-
+        ViewSet for managing poets.
+
+        Provides CRUD operations for poets with filtering and search.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این Poet را شناسایی میکند.
+        required: true
+      tags:
+      - poets
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GanjoorPoetRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/GanjoorPoetRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/GanjoorPoetRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorPoet'
+          description: ''
+    patch:
+      operationId: poets_partial_update
+      description: |-
+        ViewSet for managing poets.
+
+        Provides CRUD operations for poets with filtering and search.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این Poet را شناسایی میکند.
+        required: true
+      tags:
+      - poets
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedGanjoorPoetRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedGanjoorPoetRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedGanjoorPoetRequest'
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorPoet'
+          description: ''
+    delete:
+      operationId: poets_destroy
+      description: |-
+        ViewSet for managing poets.
+
+        Provides CRUD operations for poets with filtering and search.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این Poet را شناسایی میکند.
+        required: true
+      tags:
+      - poets
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/poets/{id}/categories/:
+    get:
+      operationId: poets_categories_retrieve
+      description: Get all categories for a specific poet.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این Poet را شناسایی میکند.
+        required: true
+      tags:
+      - poets
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorPoet'
+          description: ''
+  /api/poets/{id}/poems/:
+    get:
+      operationId: poets_poems_retrieve
+      description: Get all poems for a specific poet.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این Poet را شناسایی میکند.
+        required: true
+      tags:
+      - poets
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorPoet'
+          description: ''
+  /api/settings/:
+    get:
+      operationId: settings_list
+      description: |-
+        ViewSet for managing user settings.
+
+        Users can only view and manage their own settings.
+      parameters:
+      - name: ordering
+        required: false
+        in: query
+        description: کدام فیلد باید هنگام مرتب‌سازی نتایج استفاده شود.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: یک شماره صفحه‌ در مجموعه نتایج صفحه‌بندی شده.
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: یک عبارت جستجو.
+        schema:
+          type: string
+      tags:
+      - settings
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedUserSettingList'
+          description: ''
+    post:
+      operationId: settings_create
+      description: |-
+        ViewSet for managing user settings.
+
+        Users can only view and manage their own settings.
+      tags:
+      - settings
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserSettingRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/UserSettingRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/UserSettingRequest'
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserSetting'
+          description: ''
+  /api/settings/{id}/:
+    get:
+      operationId: settings_retrieve
+      description: |-
+        ViewSet for managing user settings.
+
+        Users can only view and manage their own settings.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - settings
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserSetting'
+          description: ''
+    put:
+      operationId: settings_update
+      description: |-
+        ViewSet for managing user settings.
+
+        Users can only view and manage their own settings.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - settings
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserSettingRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/UserSettingRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/UserSettingRequest'
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserSetting'
+          description: ''
+    patch:
+      operationId: settings_partial_update
+      description: |-
+        ViewSet for managing user settings.
+
+        Users can only view and manage their own settings.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - settings
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedUserSettingRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedUserSettingRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedUserSettingRequest'
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserSetting'
+          description: ''
+    delete:
+      operationId: settings_destroy
+      description: |-
+        ViewSet for managing user settings.
+
+        Users can only view and manage their own settings.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - settings
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/settings/me/:
+    get:
+      operationId: settings_me_retrieve
+      description: |-
+        Get or update current user's settings.
+
+        GET: Returns current user's settings
+        POST: Updates current user's settings
+      tags:
+      - settings
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserSetting'
+          description: ''
+    post:
+      operationId: settings_me_create
+      description: |-
+        Get or update current user's settings.
+
+        GET: Returns current user's settings
+        POST: Updates current user's settings
+      tags:
+      - settings
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserSettingRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/UserSettingRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/UserSettingRequest'
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserSetting'
+          description: ''
+  /api/verses/:
+    get:
+      operationId: verses_list
+      description: |-
+        ViewSet for managing verses.
+
+        Provides CRUD operations for verses with filtering.
+      parameters:
+      - name: ordering
+        required: false
+        in: query
+        description: کدام فیلد باید هنگام مرتب‌سازی نتایج استفاده شود.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: یک شماره صفحه‌ در مجموعه نتایج صفحه‌بندی شده.
+        schema:
+          type: integer
+      - in: query
+        name: poem
+        schema:
+          type: integer
+      - in: query
+        name: position
+        schema:
+          type: integer
+          enum:
+          - -1
+          - 0
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+        description: |-
+          * `0` - Right (First Hemistich)
+          * `1` - Left (Second Hemistich)
+          * `2` - Centered Verse 1
+          * `3` - Centered Verse 2
+          * `4` - Single (Free Verse)
+          * `5` - Comment
+          * `-1` - Paragraph (Prose)
+      - name: search
+        required: false
+        in: query
+        description: یک عبارت جستجو.
+        schema:
+          type: string
+      tags:
+      - verses
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedGanjoorVerseList'
+          description: ''
+    post:
+      operationId: verses_create
+      description: |-
+        ViewSet for managing verses.
+
+        Provides CRUD operations for verses with filtering.
+      tags:
+      - verses
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GanjoorVerseRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/GanjoorVerseRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/GanjoorVerseRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorVerse'
+          description: ''
+  /api/verses/{id}/:
+    get:
+      operationId: verses_retrieve
+      description: |-
+        ViewSet for managing verses.
+
+        Provides CRUD operations for verses with filtering.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این ganjoor verse را شناسایی میکند.
+        required: true
+      tags:
+      - verses
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorVerse'
+          description: ''
+    put:
+      operationId: verses_update
+      description: |-
+        ViewSet for managing verses.
+
+        Provides CRUD operations for verses with filtering.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این ganjoor verse را شناسایی میکند.
+        required: true
+      tags:
+      - verses
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GanjoorVerseRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/GanjoorVerseRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/GanjoorVerseRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorVerse'
+          description: ''
+    patch:
+      operationId: verses_partial_update
+      description: |-
+        ViewSet for managing verses.
+
+        Provides CRUD operations for verses with filtering.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این ganjoor verse را شناسایی میکند.
+        required: true
+      tags:
+      - verses
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedGanjoorVerseRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedGanjoorVerseRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedGanjoorVerseRequest'
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GanjoorVerse'
+          description: ''
+    delete:
+      operationId: verses_destroy
+      description: |-
+        ViewSet for managing verses.
+
+        Provides CRUD operations for verses with filtering.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: یک مقداد عدد یکتا که این ganjoor verse را شناسایی میکند.
+        required: true
+      tags:
+      - verses
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      responses:
+        '204':
+          description: No response body
+components:
+  schemas:
+    CenturyEnum:
+      enum:
+      - ancient
+      - classical
+      - contemporary
+      - modern
+      type: string
+      description: |-
+        * `ancient` - Ancient
+        * `classical` - Classical
+        * `contemporary` - Contemporary
+        * `modern` - Modern
+    GanjoorAudioSync:
+      type: object
+      description: Serializer for audio synchronization data.
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        poem:
+          type: integer
+        poem_title:
+          type: string
+          readOnly: true
+        audio:
+          type: integer
+        verse_order:
+          type: integer
+          maximum: 2147483647
+          minimum: 0
+        verse_text:
+          type: string
+          readOnly: true
+        millisec:
+          type: integer
+          maximum: 2147483647
+          minimum: 0
+          title: Milliseconds
+      required:
+      - audio
+      - id
+      - millisec
+      - poem
+      - poem_title
+      - verse_order
+      - verse_text
+    GanjoorAudioSyncRequest:
+      type: object
+      description: Serializer for audio synchronization data.
+      properties:
+        poem:
+          type: integer
+        audio:
+          type: integer
+        verse_order:
+          type: integer
+          maximum: 2147483647
+          minimum: 0
+        millisec:
+          type: integer
+          maximum: 2147483647
+          minimum: 0
+          title: Milliseconds
+      required:
+      - audio
+      - millisec
+      - poem
+      - verse_order
+    GanjoorCategory:
+      type: object
+      description: Detailed serializer for individual category views.
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        title:
+          type: string
+          maxLength: 255
+        url:
+          type: string
+          nullable: true
+          title: نشانی اینترنتی
+          maxLength: 255
+        poet:
+          type: integer
+        poet_name:
+          type: string
+          readOnly: true
+        parent:
+          type: integer
+          nullable: true
+          title: Parent Category
+        parent_title:
+          type: string
+          readOnly: true
+          nullable: true
+        children:
+          type: string
+          readOnly: true
+        poems_count:
+          type: string
+          readOnly: true
+        breadcrumbs:
+          type: string
+          readOnly: true
+      required:
+      - breadcrumbs
+      - children
+      - id
+      - parent_title
+      - poems_count
+      - poet
+      - poet_name
+      - title
+    GanjoorCategoryList:
+      type: object
+      description: Lightweight serializer for category list views.
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        title:
+          type: string
+          maxLength: 255
+        url:
+          type: string
+          nullable: true
+          title: نشانی اینترنتی
+          maxLength: 255
+        poet:
+          type: integer
+        poet_name:
+          type: string
+          readOnly: true
+        parent:
+          type: integer
+          nullable: true
+          title: Parent Category
+        parent_title:
+          type: string
+          readOnly: true
+          nullable: true
+      required:
+      - id
+      - parent_title
+      - poet
+      - poet_name
+      - title
+    GanjoorCategoryRequest:
+      type: object
+      description: Detailed serializer for individual category views.
+      properties:
+        title:
+          type: string
+          minLength: 1
+          maxLength: 255
+        url:
+          type: string
+          nullable: true
+          title: نشانی اینترنتی
+          maxLength: 255
+        poet:
+          type: integer
+        parent:
+          type: integer
+          nullable: true
+          title: Parent Category
+      required:
+      - poet
+      - title
+    GanjoorFavorite:
+      type: object
+      description: Serializer for user favorites.
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        user:
+          type: integer
+          readOnly: true
+          title: کاربر
+        user_username:
+          type: string
+          readOnly: true
+        poem:
+          type: integer
+        poem_title:
+          type: string
+          readOnly: true
+        verse:
+          type: integer
+        verse_text:
+          type: string
+          readOnly: true
+        poet_name:
+          type: string
+          readOnly: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+      required:
+      - created_at
+      - id
+      - poem
+      - poem_title
+      - poet_name
+      - user
+      - user_username
+      - verse
+      - verse_text
+    GanjoorFavoriteRequest:
+      type: object
+      description: Serializer for user favorites.
+      properties:
+        poem:
+          type: integer
+        verse:
+          type: integer
+      required:
+      - poem
+      - verse
+    GanjoorPoem:
+      type: object
+      description: Detailed serializer for individual poem views with verses.
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        title:
+          type: string
+          maxLength: 255
+        url:
+          type: string
+          title: نشانی اینترنتی
+          maxLength: 255
+        category:
+          type: integer
+        category_title:
+          type: string
+          readOnly: true
+        poet_id:
+          type: integer
+          readOnly: true
+        poet_name:
+          type: string
+          readOnly: true
+        verses:
+          type: array
+          items:
+            $ref: '#/components/schemas/GanjoorVerse'
+          readOnly: true
+        verses_count:
+          type: string
+          readOnly: true
+        audios:
+          type: string
+          readOnly: true
+      required:
+      - audios
+      - category
+      - category_title
+      - id
+      - poet_id
+      - poet_name
+      - title
+      - url
+      - verses
+      - verses_count
+    GanjoorPoemAudio:
+      type: object
+      description: Serializer for poem audio files.
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        poem:
+          type: integer
+        poem_title:
+          type: string
+          readOnly: true
+        file:
+          type: string
+          format: uri
+          title: Audio File
+        file_url:
+          type: string
+          readOnly: true
+        description:
+          type: string
+          nullable: true
+        download_url:
+          type: string
+          format: uri
+          maxLength: 500
+        is_direct:
+          type: boolean
+        sync_guid:
+          type: string
+          maxLength: 255
+        file_checksum:
+          type: string
+          readOnly: true
+        is_uploaded:
+          type: boolean
+          readOnly: true
+      required:
+      - download_url
+      - file
+      - file_checksum
+      - file_url
+      - id
+      - is_uploaded
+      - poem
+      - poem_title
+      - sync_guid
+    GanjoorPoemAudioRequest:
+      type: object
+      description: Serializer for poem audio files.
+      properties:
+        poem:
+          type: integer
+        file:
+          type: string
+          format: binary
+          title: Audio File
+        description:
+          type: string
+          nullable: true
+        download_url:
+          type: string
+          format: uri
+          minLength: 1
+          maxLength: 500
+        is_direct:
+          type: boolean
+        sync_guid:
+          type: string
+          minLength: 1
+          maxLength: 255
+      required:
+      - download_url
+      - file
+      - poem
+      - sync_guid
+    GanjoorPoemList:
+      type: object
+      description: Lightweight serializer for poem list views.
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        title:
+          type: string
+          maxLength: 255
+        url:
+          type: string
+          title: نشانی اینترنتی
+          maxLength: 255
+        category:
+          type: integer
+        category_title:
+          type: string
+          readOnly: true
+        poet_name:
+          type: string
+          readOnly: true
+        verses_count:
+          type: string
+          readOnly: true
+      required:
+      - category
+      - category_title
+      - id
+      - poet_name
+      - title
+      - url
+      - verses_count
+    GanjoorPoemRequest:
+      type: object
+      description: Detailed serializer for individual poem views with verses.
+      properties:
+        title:
+          type: string
+          minLength: 1
+          maxLength: 255
+        url:
+          type: string
+          minLength: 1
+          title: نشانی اینترنتی
+          maxLength: 255
+        category:
+          type: integer
+      required:
+      - category
+      - title
+      - url
+    GanjoorPoet:
+      type: object
+      description: Detailed serializer for individual poet views.
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          maxLength: 255
+        description:
+          type: string
+        century:
+          $ref: '#/components/schemas/CenturyEnum'
+        century_display:
+          type: string
+          readOnly: true
+        image:
+          type: string
+          format: uri
+          nullable: true
+          title: تصویر
+          description: Portrait image of the poet
+        image_slug:
+          type: string
+          nullable: true
+          description: English transliteration for image filename
+          maxLength: 255
+        categories_count:
+          type: string
+          readOnly: true
+        poems_count:
+          type: string
+          readOnly: true
+      required:
+      - categories_count
+      - century_display
+      - id
+      - name
+      - poems_count
+    GanjoorPoetList:
+      type: object
+      description: Lightweight serializer for poet list views.
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          maxLength: 255
+        century:
+          $ref: '#/components/schemas/CenturyEnum'
+        image:
+          type: string
+          format: uri
+          nullable: true
+          title: تصویر
+          description: Portrait image of the poet
+        image_slug:
+          type: string
+          nullable: true
+          description: English transliteration for image filename
+          maxLength: 255
+        poems_count:
+          type: string
+          readOnly: true
+      required:
+      - id
+      - name
+      - poems_count
+    GanjoorPoetRequest:
+      type: object
+      description: Detailed serializer for individual poet views.
+      properties:
+        name:
+          type: string
+          minLength: 1
+          maxLength: 255
+        description:
+          type: string
+        century:
+          $ref: '#/components/schemas/CenturyEnum'
+        image:
+          type: string
+          format: binary
+          nullable: true
+          title: تصویر
+          description: Portrait image of the poet
+        image_slug:
+          type: string
+          nullable: true
+          description: English transliteration for image filename
+          maxLength: 255
+      required:
+      - name
+    GanjoorVerse:
+      type: object
+      description: Serializer for verses with position information.
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        poem:
+          type: integer
+        order:
+          type: integer
+          maximum: 2147483647
+          minimum: 0
+          title: 'ترتیب:'
+          description: Order of the verse in the poem
+        position:
+          allOf:
+          - $ref: '#/components/schemas/PositionEnum'
+          minimum: -32768
+          maximum: 32767
+        position_display:
+          type: string
+          readOnly: true
+        text:
+          type: string
+          title: متن
+      required:
+      - id
+      - order
+      - poem
+      - position_display
+      - text
+    GanjoorVerseRequest:
+      type: object
+      description: Serializer for verses with position information.
+      properties:
+        poem:
+          type: integer
+        order:
+          type: integer
+          maximum: 2147483647
+          minimum: 0
+          title: 'ترتیب:'
+          description: Order of the verse in the poem
+        position:
+          allOf:
+          - $ref: '#/components/schemas/PositionEnum'
+          minimum: -32768
+          maximum: 32767
+        text:
+          type: string
+          minLength: 1
+          title: متن
+      required:
+      - order
+      - poem
+      - text
+    PaginatedGanjoorAudioSyncList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/GanjoorAudioSync'
+    PaginatedGanjoorCategoryListList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/GanjoorCategoryList'
+    PaginatedGanjoorFavoriteList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/GanjoorFavorite'
+    PaginatedGanjoorPoemAudioList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/GanjoorPoemAudio'
+    PaginatedGanjoorPoemListList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/GanjoorPoemList'
+    PaginatedGanjoorPoetListList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/GanjoorPoetList'
+    PaginatedGanjoorVerseList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/GanjoorVerse'
+    PaginatedUserSettingList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/UserSetting'
+    PatchedGanjoorAudioSyncRequest:
+      type: object
+      description: Serializer for audio synchronization data.
+      properties:
+        poem:
+          type: integer
+        audio:
+          type: integer
+        verse_order:
+          type: integer
+          maximum: 2147483647
+          minimum: 0
+        millisec:
+          type: integer
+          maximum: 2147483647
+          minimum: 0
+          title: Milliseconds
+    PatchedGanjoorCategoryRequest:
+      type: object
+      description: Detailed serializer for individual category views.
+      properties:
+        title:
+          type: string
+          minLength: 1
+          maxLength: 255
+        url:
+          type: string
+          nullable: true
+          title: نشانی اینترنتی
+          maxLength: 255
+        poet:
+          type: integer
+        parent:
+          type: integer
+          nullable: true
+          title: Parent Category
+    PatchedGanjoorFavoriteRequest:
+      type: object
+      description: Serializer for user favorites.
+      properties:
+        poem:
+          type: integer
+        verse:
+          type: integer
+    PatchedGanjoorPoemAudioRequest:
+      type: object
+      description: Serializer for poem audio files.
+      properties:
+        poem:
+          type: integer
+        file:
+          type: string
+          format: binary
+          title: Audio File
+        description:
+          type: string
+          nullable: true
+        download_url:
+          type: string
+          format: uri
+          minLength: 1
+          maxLength: 500
+        is_direct:
+          type: boolean
+        sync_guid:
+          type: string
+          minLength: 1
+          maxLength: 255
+    PatchedGanjoorPoemRequest:
+      type: object
+      description: Detailed serializer for individual poem views with verses.
+      properties:
+        title:
+          type: string
+          minLength: 1
+          maxLength: 255
+        url:
+          type: string
+          minLength: 1
+          title: نشانی اینترنتی
+          maxLength: 255
+        category:
+          type: integer
+    PatchedGanjoorPoetRequest:
+      type: object
+      description: Detailed serializer for individual poet views.
+      properties:
+        name:
+          type: string
+          minLength: 1
+          maxLength: 255
+        description:
+          type: string
+        century:
+          $ref: '#/components/schemas/CenturyEnum'
+        image:
+          type: string
+          format: binary
+          nullable: true
+          title: تصویر
+          description: Portrait image of the poet
+        image_slug:
+          type: string
+          nullable: true
+          description: English transliteration for image filename
+          maxLength: 255
+    PatchedGanjoorVerseRequest:
+      type: object
+      description: Serializer for verses with position information.
+      properties:
+        poem:
+          type: integer
+        order:
+          type: integer
+          maximum: 2147483647
+          minimum: 0
+          title: 'ترتیب:'
+          description: Order of the verse in the poem
+        position:
+          allOf:
+          - $ref: '#/components/schemas/PositionEnum'
+          minimum: -32768
+          maximum: 32767
+        text:
+          type: string
+          minLength: 1
+          title: متن
+    PatchedUserSettingRequest:
+      type: object
+      description: Serializer for user settings.
+      properties:
+        view_mode:
+          type: string
+          minLength: 1
+          maxLength: 50
+        font_size:
+          type: number
+          format: double
+        show_line_numbers:
+          type: boolean
+        last_highlight:
+          type: string
+          nullable: true
+          maxLength: 255
+        browse_button_visible:
+          type: boolean
+        comments_button_visible:
+          type: boolean
+        copy_button_visible:
+          type: boolean
+        print_button_visible:
+          type: boolean
+        home_button_visible:
+          type: boolean
+        random_button_visible:
+          type: boolean
+        editor_button_visible:
+          type: boolean
+        download_button_visible:
+          type: boolean
+    PositionEnum:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - -1
+      type: integer
+      description: |-
+        * `0` - Right (First Hemistich)
+        * `1` - Left (Second Hemistich)
+        * `2` - Centered Verse 1
+        * `3` - Centered Verse 2
+        * `4` - Single (Free Verse)
+        * `5` - Comment
+        * `-1` - Paragraph (Prose)
+    UserSetting:
+      type: object
+      description: Serializer for user settings.
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        user:
+          type: integer
+          readOnly: true
+          title: کاربر
+        username:
+          type: string
+          readOnly: true
+        view_mode:
+          type: string
+          maxLength: 50
+        font_size:
+          type: number
+          format: double
+        show_line_numbers:
+          type: boolean
+        last_highlight:
+          type: string
+          nullable: true
+          maxLength: 255
+        browse_button_visible:
+          type: boolean
+        comments_button_visible:
+          type: boolean
+        copy_button_visible:
+          type: boolean
+        print_button_visible:
+          type: boolean
+        home_button_visible:
+          type: boolean
+        random_button_visible:
+          type: boolean
+        editor_button_visible:
+          type: boolean
+        download_button_visible:
+          type: boolean
+      required:
+      - id
+      - user
+      - username
+    UserSettingRequest:
+      type: object
+      description: Serializer for user settings.
+      properties:
+        view_mode:
+          type: string
+          minLength: 1
+          maxLength: 50
+        font_size:
+          type: number
+          format: double
+        show_line_numbers:
+          type: boolean
+        last_highlight:
+          type: string
+          nullable: true
+          maxLength: 255
+        browse_button_visible:
+          type: boolean
+        comments_button_visible:
+          type: boolean
+        copy_button_visible:
+          type: boolean
+        print_button_visible:
+          type: boolean
+        home_button_visible:
+          type: boolean
+        random_button_visible:
+          type: boolean
+        editor_button_visible:
+          type: boolean
+        download_button_visible:
+          type: boolean
+  securitySchemes:
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
+    jwtAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
