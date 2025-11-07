@@ -54,111 +54,107 @@ export default async function PoemPage({ params }: PoemPageProps) {
   };
 
   return (
-    <div className="min-h-screen py-8 px-4">
+    <div className="min-h-screen py-8 px-4 animate-fade-in">
       <div className="max-w-4xl mx-auto">
         {/* Breadcrumb */}
-        <nav className="mb-8">
+        <nav className="mb-8 animate-slide-up">
           <Link href="/" className="nav-link persian-text">
             خانه
           </Link>
-          <span className="mx-2 text-persian-ink/50">/</span>
+          <span className="mx-2 text-persian-ink/50">❋</span>
           <Link href={`/poets/${poem.poet_id}`} className="nav-link persian-text">
             {poem.poet_name}
           </Link>
-          <span className="mx-2 text-persian-ink/50">/</span>
+          <span className="mx-2 text-persian-ink/50">❋</span>
           <Link href={`/categories/${poem.category}`} className="nav-link persian-text">
             {poem.category_title}
           </Link>
-          <span className="mx-2 text-persian-ink/50">/</span>
-          <span className="text-persian-ink persian-text">{poem.title}</span>
+          <span className="mx-2 text-persian-ink/50">❋</span>
+          <span className="text-persian-ink persian-text font-medium">{poem.title}</span>
         </nav>
 
-        {/* Poem Header */}
-        <div className="persian-card p-8 mb-8">
+        {/* Poem Header - Traditional Ganjoor Style */}
+        <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">
           <div className="text-center">
-            <h1 className="text-3xl font-bold text-persian-ink mb-4 persian-text">
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 persian-text">
               {poem.title}
             </h1>
-            <div className="flex justify-center items-center gap-4 text-sm text-persian-ink/70 persian-text">
-              <span>از {poem.poet_name}</span>
-              <span>•</span>
-              <span>{poem.category_title}</span>
-              <span>•</span>
-              <span>{poem.verses_count} بیت</span>
+            <div className="text-sm text-gray-600 persian-text space-y-1">
+              <p>از {poem.poet_name}</p>
+              <p>{poem.category_title}</p>
+              <p>{poem.verses_count} بیت</p>
             </div>
             {poem.url && (
-              <a
-                href={poem.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-persian-gold text-persian-ink rounded-lg hover:bg-persian-gold transition-colors persian-text"
-                style={{backgroundColor: 'rgb(212 175 55 / 0.8)'}}
-              >
-                مشاهده در گنجور
-              </a>
+              <div className="mt-4">
+                <a
+                  href={poem.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-4 py-2 text-blue-600 hover:text-blue-800 hover:underline persian-text text-sm"
+                >
+                  مشاهده در گنجور اصلی
+                </a>
+              </div>
             )}
           </div>
         </div>
 
-        {/* Poem Verses */}
-        <div className="persian-card p-8 mb-8">
-          <div className="poetry-text text-persian-ink leading-loose">
+        {/* Poem Verses - Traditional Persian Poetry Style */}
+        <div className="bg-white border border-gray-200 rounded-lg p-8 md:p-12 mb-8">
+          <div className="poetry-text max-w-4xl mx-auto">
             {poem.verses && poem.verses.length > 0 ? (
-              <div className="space-y-4">
-                {poem.verses.map((verse: GanjoorVerse, index: number) => (
-                  <div key={verse.id} className="verse-line">
-                    {verse.position === -1 ? (
-                      // Paragraph (Prose)
-                      <p className="text-justify text-lg leading-relaxed">
-                        {verse.text}
-                      </p>
-                    ) : verse.position >= 2 ? (
-                      // Centered verses
-                      <div className="text-center">
-                        <p className="text-lg">{verse.text}</p>
-                      </div>
-                    ) : (
-                      // Hemistich verses
-                      <div className="grid grid-cols-2 gap-4">
-                        <div className="text-right">
-                          {verse.position === 0 && (
-                            <span className="text-lg">{verse.text}</span>
-                          )}
+              <div className="space-y-3">
+                {/* Group verses into beyts (couplets) */}
+                {(() => {
+                  const beyts: GanjoorVerse[][] = [];
+                  for (let i = 0; i < poem.verses.length; i += 2) {
+                    beyts.push(poem.verses.slice(i, i + 2));
+                  }
+                  return beyts.map((beyt, beytIndex) => (
+                    <div key={`beyt-${beytIndex}`} className="beyt-line">
+                      {beyt.length === 2 ? (
+                        // Traditional beyts (couplets) - two hemistichs
+                        <div className="text-lg leading-relaxed text-center">
+                          {beyt[0].text}
+                          <span className="inline-block mx-4 text-gray-400 text-xl"> </span>
+                          {beyt[1].text}
                         </div>
-                        <div className="text-left">
-                          {verse.position === 1 && (
-                            <span className="text-lg">{verse.text}</span>
-                          )}
+                      ) : (
+                        // Single verse (odd number of verses or special cases)
+                        <div className="text-center text-lg leading-relaxed">
+                          {beyt[0].text}
                         </div>
-                      </div>
-                    )}
-                  </div>
-                ))}
+                      )}
+                    </div>
+                  ));
+                })()}
               </div>
             ) : (
-              <div className="text-center py-12">
-                <p className="text-persian-ink/70 persian-text">متأسفانه متنی برای این شعر یافت نشد.</p>
+              <div className="text-center py-16">
+                <p className="text-gray-600 persian-text text-lg">متأسفانه متنی برای این شعر یافت نشد.</p>
+                <p className="text-gray-500 persian-text text-sm mt-2">در آینده متن این شعر اضافه خواهد شد.</p>
               </div>
             )}
           </div>
         </div>
 
-        {/* Navigation */}
-        <div className="flex justify-between items-center">
-          <Link
-            href={`/categories/${poem.category}`}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-persian-indigo text-white rounded-lg hover:bg-persian-indigo transition-colors persian-text font-medium"
-            style={{backgroundColor: 'rgb(46 52 64 / 0.8)'}}
-          >
-            بازگشت به دسته‌بندی
-          </Link>
-          <Link
-            href={`/poets/${poem.poet_id}`}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-persian-gold text-persian-ink rounded-lg hover:bg-persian-gold transition-colors persian-text font-medium"
-            style={{backgroundColor: 'rgb(212 175 55 / 0.8)'}}
-          >
-            بازگشت به شاعر
-          </Link>
+        {/* Navigation - Traditional Ganjoor Style */}
+        <div className="text-center">
+          <div className="space-x-6">
+            <Link
+              href={`/categories/${poem.category}`}
+              className="text-blue-600 hover:text-blue-800 hover:underline persian-text text-sm"
+            >
+              بازگشت به {poem.category_title}
+            </Link>
+            <span className="text-gray-400">|</span>
+            <Link
+              href={`/poets/${poem.poet_id}`}
+              className="text-blue-600 hover:text-blue-800 hover:underline persian-text text-sm"
+            >
+              بازگشت به {poem.poet_name}
+            </Link>
+          </div>
         </div>
       </div>
     </div>
