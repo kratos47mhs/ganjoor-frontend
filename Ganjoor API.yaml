@@ -1892,6 +1892,9 @@ components:
         children:
           type: string
           readOnly: true
+        poems:
+          type: string
+          readOnly: true
         poems_count:
           type: string
           readOnly: true
@@ -1903,6 +1906,7 @@ components:
       - children
       - id
       - parent_title
+      - poems
       - poems_count
       - poet
       - poet_name
@@ -1935,9 +1939,13 @@ components:
           type: string
           readOnly: true
           nullable: true
+        poems_count:
+          type: string
+          readOnly: true
       required:
       - id
       - parent_title
+      - poems_count
       - poet
       - poet_name
       - title

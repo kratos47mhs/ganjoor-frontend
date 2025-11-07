@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme {
+  --color-persian-indigo: #2E3440;
+  --color-persian-gold: #D4AF37;
+  --color-persian-crimson: #DC143C;
+  --color-persian-turquoise: #40E0D0;
+  --color-persian-saffron: #F4C430;
+  --color-persian-rose: #FF69B4;
+  --color-persian-midnight: #191970;
+  --color-persian-parchment: #F5F5DC;
+  --color-persian-ink: #2F4F4F;
+}
+
+/* Persian Poetry Theme Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-feature-settings: "liga" 1, "kern" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Persian text enhancements */
+  .persian-text {
+    font-family: var(--font-noto-sans-arabic), system-ui, sans-serif;
+    line-height: 1.8;
+  }
+
+  .poetry-text {
+    font-family: var(--font-amiri), serif;
+    line-height: 2;
+    text-align: justify;
+  }
+
+  /* RTL scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgb(245, 245, 220);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(212, 175, 55);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(191, 155, 48);
+  }
+}
+
+@layer components {
+  /* Persian card styling */
+  .persian-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+
+  .persian-card:hover {
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  }
+
+  /* Poetry verse styling */
+  .verse-line {
+    border-radius: 0.375rem;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    text-align: right;
+    line-height: 2;
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
+
+  .verse-line:hover {
+    background-color: rgb(212 175 55 / 0.05);
+  }
+
+  .verse-hemistich {
+    margin-inline: 0.5rem;
+    display: inline-block;
+  }
+
+  /* Navigation styling */
+  .nav-link {
+    position: relative;
+    color: var(--color-persian-ink);
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
+
+  .nav-link::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0.125rem;
+    width: 0;
+    background-color: var(--color-persian-gold);
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    content: "";
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+}
