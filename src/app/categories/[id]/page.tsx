@@ -54,8 +54,9 @@ async function getCategoryData(id: string) {
       poems = poemsResponse.results;
       console.log('✅ Category poems API returned:', poems.length, 'poems for category', id);
       console.log('📝 Sample poem:', poems[0]?.title || 'No poems');
-    } catch (error: any) {
-      console.log('❌ Could not fetch poems for category', id, 'using dedicated endpoint:', error.message);
+    } catch (error) {
+      const apiError = error as { message?: string };
+      console.log('❌ Could not fetch poems for category', id, 'using dedicated endpoint:', apiError.message || 'Unknown error');
       console.log('🔄 Trying general poems API as fallback');
       try {
         // Fallback to general poems endpoint with category filter
@@ -65,8 +66,9 @@ async function getCategoryData(id: string) {
         poems = poemsResponse.results;
         console.log('✅ Fallback poems API returned:', poems.length, 'poems for category', id);
         console.log('📝 Sample poem:', poems[0]?.title || 'No poems');
-      } catch (fallbackError: any) {
-        console.log('❌ Could not fetch poems for category', id, 'with fallback either:', fallbackError.message);
+      } catch (fallbackError) {
+        const fallbackApiError = fallbackError as { message?: string };
+        console.log('❌ Could not fetch poems for category', id, 'with fallback either:', fallbackApiError.message || 'Unknown error');
         poemsError = true;
       }
     }
@@ -76,11 +78,13 @@ async function getCategoryData(id: string) {
         parent: parseInt(id)
       });
       subcategories = subcatsResponse.results;
-    } catch (error: any) {
-      console.log('Could not fetch subcategories for category', id, error.message);
+    } catch (error) {
+      const apiError = error as { message?: string };
+      console.log('Could not fetch subcategories for category', id, apiError.message || 'Unknown error');
     }
-  } catch (error: any) {
-    console.log('Rate limited or error fetching category, using fallback for', id);
+  } catch (error) {
+    const apiError = error as { message?: string };
+    console.log('Rate limited or error fetching category, using fallback for', id, apiError.message || 'Unknown error');
   }
 
   return {

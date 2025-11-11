@@ -99,40 +99,106 @@ export default async function PoemPage({ params }: PoemPageProps) {
           </div>
         </div>
 
-        {/* Poem Verses - Traditional Persian Poetry Style */}
-        <div className="bg-white border border-gray-200 rounded-lg p-8 md:p-12 mb-8">
+        {/* Poem Verses - Enhanced Persian Poetry Reading Experience */}
+        <div className="bg-gradient-to-br from-persian-parchment/50 to-white border border-persian-gold/20 rounded-xl p-8 md:p-12 mb-8 shadow-lg">
+          {/* Reading Controls */}
+          <div className="flex justify-center items-center gap-6 mb-8 p-4 bg-white/60 rounded-lg border border-persian-gold/10">
+            <div className="flex items-center gap-2 text-sm persian-text text-persian-ink/70">
+              <span className="text-persian-gold">📖</span>
+              <span>مطالعه</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm persian-text text-persian-ink/70">
+              <span className="text-persian-turquoise">🔊</span>
+              <span>شنیدن</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm persian-text text-persian-ink/70">
+              <span className="text-persian-emerald">📝</span>
+              <span>یادداشت</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm persian-text text-persian-ink/70">
+              <span className="text-persian-rose">❤️</span>
+              <span>پسندیدن</span>
+            </div>
+          </div>
+
           <div className="poetry-text max-w-4xl mx-auto">
             {poem.verses && poem.verses.length > 0 ? (
-              <div className="space-y-3">
-                {/* Group verses into beyts (couplets) */}
+              <div className="space-y-6">
+                {/* Decorative Header */}
+                <div className="text-center mb-8">
+                  <div className="inline-flex items-center gap-4 px-6 py-3 bg-persian-gold/10 rounded-full border border-persian-gold/20">
+                    <span className="text-persian-gold text-lg">❋</span>
+                    <span className="persian-text text-persian-ink font-medium">متن شعر</span>
+                    <span className="text-persian-gold text-lg">❋</span>
+                  </div>
+                </div>
+
+                {/* Group verses into beyts (couplets) with enhanced styling */}
                 {(() => {
                   const beyts: GanjoorVerse[][] = [];
                   for (let i = 0; i < poem.verses.length; i += 2) {
                     beyts.push(poem.verses.slice(i, i + 2));
                   }
                   return beyts.map((beyt, beytIndex) => (
-                    <div key={`beyt-${beytIndex}`} className="beyt-line">
+                    <div key={`beyt-${beytIndex}`} className="poetry-verse group">
                       {beyt.length === 2 ? (
-                        // Traditional beyts (couplets) - two hemistichs
-                        <div className="text-lg leading-relaxed text-center">
-                          {beyt[0].text}
-                          <span className="inline-block mx-4 text-gray-400 text-xl"> </span>
-                          {beyt[1].text}
+                        // Traditional beyts (couplets) - two hemistichs with enhanced styling
+                        <div className="text-xl leading-relaxed text-center transition-all duration-300 hover:text-persian-ink">
+                          <span className="relative">
+                            {beyt[0].text}
+                            <span className="absolute -top-2 -right-2 text-persian-gold/30 text-sm opacity-0 group-hover:opacity-100 transition-opacity">۱</span>
+                          </span>
+                          <span className="inline-block mx-6 text-persian-gold/60 text-2xl leading-none">٭</span>
+                          <span className="relative">
+                            {beyt[1].text}
+                            <span className="absolute -top-2 -left-2 text-persian-gold/30 text-sm opacity-0 group-hover:opacity-100 transition-opacity">۲</span>
+                          </span>
                         </div>
                       ) : (
                         // Single verse (odd number of verses or special cases)
-                        <div className="text-center text-lg leading-relaxed">
+                        <div className="text-center text-xl leading-relaxed transition-all duration-300 hover:text-persian-ink">
                           {beyt[0].text}
+                        </div>
+                      )}
+
+                      {/* Verse separator with Persian motif */}
+                      {beytIndex < beyts.length - 1 && (
+                        <div className="verse-separator my-8">
+                          <span className="text-persian-gold animate-pulse">❋</span>
                         </div>
                       )}
                     </div>
                   ));
                 })()}
+
+                {/* Poem Footer */}
+                <div className="text-center mt-12 pt-8 border-t border-persian-gold/20">
+                  <div className="inline-flex items-center gap-4 px-6 py-3 bg-persian-gold/5 rounded-full">
+                    <span className="text-persian-gold text-lg">✦</span>
+                    <span className="persian-text text-persian-ink/70 text-sm">
+                      پایان شعر • {poem.verses_count} بیت
+                    </span>
+                    <span className="text-persian-gold text-lg">✦</span>
+                  </div>
+                </div>
               </div>
             ) : (
-              <div className="text-center py-16">
-                <p className="text-gray-600 persian-text text-lg">متأسفانه متنی برای این شعر یافت نشد.</p>
-                <p className="text-gray-500 persian-text text-sm mt-2">در آینده متن این شعر اضافه خواهد شد.</p>
+              <div className="text-center py-20">
+                <div className="mb-6">
+                  <div className="text-6xl text-persian-gold/30 mb-4">❋</div>
+                  <h3 className="text-2xl font-bold text-persian-ink mb-2 persian-text">
+                    متنی یافت نشد
+                  </h3>
+                </div>
+                <p className="text-persian-ink/70 persian-text text-lg leading-relaxed max-w-md mx-auto">
+                  متأسفانه متن کامل این شعر در حال حاضر در دسترس نیست.
+                  در آینده نزدیک متن این اثر ارزشمند اضافه خواهد شد.
+                </p>
+                <div className="mt-6 flex justify-center">
+                  <div className="px-4 py-2 bg-persian-gold/10 rounded-lg border border-persian-gold/20">
+                    <span className="text-persian-gold text-sm persian-text">به زودی...</span>
+                  </div>
+                </div>
               </div>
             )}
           </div>

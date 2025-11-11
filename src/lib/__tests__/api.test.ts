@@ -44,9 +44,10 @@ describe('Ganjoor API Integration Tests', () => {
           expect(typeof poet.poems_count).toBe('number');
           expect(poet.poems_count).toBeGreaterThanOrEqual(0);
         }
-      } catch (error: any) {
+      } catch (error) {
         // If rate limited, that's acceptable for integration tests
-        if (error.response?.status === 429) {
+        const apiError = error as { response?: { status: number } };
+        if (apiError.response?.status === 429) {
           console.log('Rate limited during poets list test - acceptable for integration testing');
           return;
         }
@@ -82,8 +83,9 @@ describe('Ganjoor API Integration Tests', () => {
         expect(typeof result.categories_count).toBe('number');
         expect(typeof result.poems_count).toBe('number');
 
-      } catch (error: any) {
-        if (error.response?.status === 429) {
+      } catch (error) {
+        const apiError = error as { response?: { status: number } };
+        if (apiError.response?.status === 429) {
           console.log('Rate limited during poet detail test - acceptable for integration testing');
           return;
         }
@@ -106,8 +108,9 @@ describe('Ganjoor API Integration Tests', () => {
         // Should have some results for classical poets
         expect(result.results.length).toBeGreaterThan(0);
 
-      } catch (error: any) {
-        if (error.response?.status === 429) {
+      } catch (error) {
+        const apiError = error as { response?: { status: number } };
+        if (apiError.response?.status === 429) {
           console.log('Rate limited during century filter test - acceptable for integration testing');
           return;
         }
@@ -148,8 +151,9 @@ describe('Ganjoor API Integration Tests', () => {
           expect(category).toHaveProperty('url');
           expect(category.url === null || typeof category.url === 'string').toBe(true);
         }
-      } catch (error: any) {
-        if (error.response?.status === 429) {
+      } catch (error) {
+        const apiError = error as { response?: { status: number } };
+        if (apiError.response?.status === 429) {
           console.log('Rate limited during categories test - acceptable for integration testing');
           return;
         }
@@ -184,8 +188,9 @@ describe('Ganjoor API Integration Tests', () => {
         expect(result).toHaveProperty('breadcrumbs');
         expect(typeof result.breadcrumbs).toBe('string'); // JSON string per API spec
 
-      } catch (error: any) {
-        if (error.response?.status === 429) {
+      } catch (error) {
+        const apiError = error as { response?: { status: number } };
+        if (apiError.response?.status === 429) {
           console.log('Rate limited during category detail test - acceptable for integration testing');
           return;
         }
@@ -225,8 +230,9 @@ describe('Ganjoor API Integration Tests', () => {
           expect(poem).toHaveProperty('verses_count');
           expect(typeof poem.verses_count).toBe('number');
         }
-      } catch (error: any) {
-        if (error.response?.status === 429) {
+      } catch (error) {
+        const apiError = error as { response?: { status: number } };
+        if (apiError.response?.status === 429) {
           console.log('Rate limited during poems list test - acceptable for integration testing');
           return;
         }
@@ -285,8 +291,9 @@ describe('Ganjoor API Integration Tests', () => {
           expect(verse.text.length).toBeGreaterThan(0);
         }
 
-      } catch (error: any) {
-        if (error.response?.status === 429) {
+      } catch (error) {
+        const apiError = error as { response?: { status: number } };
+        if (apiError.response?.status === 429) {
           console.log('Rate limited during poem detail test - acceptable for integration testing');
           return;
         }
@@ -329,15 +336,16 @@ describe('Ganjoor API Integration Tests', () => {
       try {
         await api.poets.get(999999); // Non-existent poet ID
         // If we get here without throwing, the API might handle invalid IDs differently
-      } catch (error: any) {
+      } catch (error) {
         // 404 is expected for non-existent resources
-        if (error.response?.status === 404) {
-          expect(error.response.status).toBe(404);
-        } else if (error.response?.status === 429) {
+        const apiError = error as { response?: { status: number } };
+        if (apiError.response?.status === 404) {
+          expect(apiError.response.status).toBe(404);
+        } else if (apiError.response?.status === 429) {
           console.log('Rate limited during 404 test - acceptable');
         } else {
           // Other errors might be acceptable depending on API implementation
-          console.log('API returned different error for invalid ID:', error.response?.status);
+          console.log('API returned different error for invalid ID:', apiError.response?.status);
         }
       }
     });

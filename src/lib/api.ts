@@ -1,7 +1,20 @@
-import axios, { AxiosInstance, AxiosResponse } from 'axios';
+import axios, { AxiosInstance, AxiosResponse, AxiosError } from 'axios';
 
 // API Configuration
 const API_BASE_URL = 'http://localhost:8000/api';
+
+// Type definitions for API parameters
+interface ApiParams {
+  [key: string]: unknown;
+}
+
+interface ApiError {
+  response?: {
+    status: number;
+    data?: unknown;
+  };
+  message: string;
+}
 
 class ApiClient {
   private client: AxiosInstance;
@@ -57,7 +70,7 @@ class ApiClient {
   }
 
   // Generic request methods with retry logic for rate limiting
-  async get<T>(url: string, params?: any): Promise<T> {
+  async get<T>(url: string, params?: ApiParams): Promise<T> {
     const maxRetries = 5; // Increased retries
     let retries = 0;
 
@@ -65,8 +78,9 @@ class ApiClient {
       try {
         const response: AxiosResponse<T> = await this.client.get(url, { params });
         return response.data;
-      } catch (error: any) {
-        if (error.response?.status === 429 && retries < maxRetries - 1) {
+      } catch (error) {
+        const apiError = error as ApiError;
+        if (apiError.response?.status === 429 && retries < maxRetries - 1) {
           // Rate limited - wait longer and retry
           const waitTime = Math.pow(2, retries) * 2000; // Longer backoff: 2s, 4s, 8s, 16s
           console.log(`Rate limited, retrying in ${waitTime}ms...`);
@@ -80,7 +94,7 @@ class ApiClient {
     throw new Error('Max retries exceeded');
   }
 
-  async post<T>(url: string, data?: any): Promise<T> {
+  async post<T>(url: string, data?: ApiParams): Promise<T> {
     const maxRetries = 3;
     let retries = 0;
 
@@ -88,8 +102,9 @@ class ApiClient {
       try {
         const response: AxiosResponse<T> = await this.client.post(url, data);
         return response.data;
-      } catch (error: any) {
-        if (error.response?.status === 429 && retries < maxRetries - 1) {
+      } catch (error) {
+        const apiError = error as ApiError;
+        if (apiError.response?.status === 429 && retries < maxRetries - 1) {
           const waitTime = Math.pow(2, retries) * 1000;
           console.log(`Rate limited (POST), retrying in ${waitTime}ms...`);
           await new Promise(resolve => setTimeout(resolve, waitTime));
@@ -102,7 +117,7 @@ class ApiClient {
     throw new Error('Max retries exceeded');
   }
 
-  async put<T>(url: string, data?: any): Promise<T> {
+  async put<T>(url: string, data?: ApiParams): Promise<T> {
     const maxRetries = 3;
     let retries = 0;
 
@@ -110,8 +125,9 @@ class ApiClient {
       try {
         const response: AxiosResponse<T> = await this.client.put(url, data);
         return response.data;
-      } catch (error: any) {
-        if (error.response?.status === 429 && retries < maxRetries - 1) {
+      } catch (error) {
+        const apiError = error as ApiError;
+        if (apiError.response?.status === 429 && retries < maxRetries - 1) {
           const waitTime = Math.pow(2, retries) * 1000;
           console.log(`Rate limited (PUT), retrying in ${waitTime}ms...`);
           await new Promise(resolve => setTimeout(resolve, waitTime));
@@ -124,7 +140,7 @@ class ApiClient {
     throw new Error('Max retries exceeded');
   }
 
-  async patch<T>(url: string, data?: any): Promise<T> {
+  async patch<T>(url: string, data?: ApiParams): Promise<T> {
     const maxRetries = 3;
     let retries = 0;
 
@@ -132,8 +148,9 @@ class ApiClient {
       try {
         const response: AxiosResponse<T> = await this.client.patch(url, data);
         return response.data;
-      } catch (error: any) {
-        if (error.response?.status === 429 && retries < maxRetries - 1) {
+      } catch (error) {
+        const apiError = error as ApiError;
+        if (apiError.response?.status === 429 && retries < maxRetries - 1) {
           const waitTime = Math.pow(2, retries) * 1000;
           console.log(`Rate limited (PATCH), retrying in ${waitTime}ms...`);
           await new Promise(resolve => setTimeout(resolve, waitTime));
@@ -154,8 +171,9 @@ class ApiClient {
       try {
         const response: AxiosResponse<T> = await this.client.delete(url);
         return response.data;
-      } catch (error: any) {
-        if (error.response?.status === 429 && retries < maxRetries - 1) {
+      } catch (error) {
+        const apiError = error as ApiError;
+        if (apiError.response?.status === 429 && retries < maxRetries - 1) {
           const waitTime = Math.pow(2, retries) * 1000;
           console.log(`Rate limited (DELETE), retrying in ${waitTime}ms...`);
           await new Promise(resolve => setTimeout(resolve, waitTime));
@@ -296,9 +314,9 @@ export interface GanjoorCategoryList {
 }
 
 export interface GanjoorCategory extends GanjoorCategoryList {
-  children: any[]; // API returns array, not string
+  children: GanjoorCategoryList[]; // Array of subcategories
   poems_count: number; // API returns number, not string
-  breadcrumbs: string;
+  breadcrumbs: string | unknown; // Allow both string and unknown for API compatibility
 }
 
 export interface GanjoorPoemList {

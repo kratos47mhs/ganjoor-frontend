@@ -1,0 +1,1420 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - heading "گنجور" [level=1] [ref=e5]
+      - paragraph [ref=e6]: مجموعه اشعار فارسی
+    - generic [ref=e9]:
+      - button "همه" [ref=e10]
+      - button "باستانی" [ref=e11]
+      - button "کلاسیک" [ref=e12]
+      - button "معاصر" [ref=e13]
+      - button "نو" [ref=e14]
+    - generic [ref=e15]:
+      - link "ش آذر بیگدلی کلاسیک 555 شعر" [ref=e16] [cursor=pointer]:
+        - /url: /poets/148
+        - generic [ref=e17]:
+          - generic [ref=e20]: ش
+          - heading "آذر بیگدلی" [level=3] [ref=e21]
+          - generic [ref=e22]: کلاسیک
+          - generic [ref=e23]: 555 شعر
+      - link "ش آشفتهٔ شیرازی کلاسیک 1262 شعر" [ref=e24] [cursor=pointer]:
+        - /url: /poets/119
+        - generic [ref=e25]:
+          - generic [ref=e28]: ش
+          - heading "آشفتهٔ شیرازی" [level=3] [ref=e29]
+          - generic [ref=e30]: کلاسیک
+          - generic [ref=e31]: 1262 شعر
+      - link "ش ابن حسام خوسفی کلاسیک 281 شعر" [ref=e32] [cursor=pointer]:
+        - /url: /poets/57
+        - generic [ref=e33]:
+          - generic [ref=e36]: ش
+          - heading "ابن حسام خوسفی" [level=3] [ref=e37]
+          - generic [ref=e38]: کلاسیک
+          - generic [ref=e39]: 281 شعر
+      - link "ش ابن عماد کلاسیک 62 شعر" [ref=e40] [cursor=pointer]:
+        - /url: /poets/196
+        - generic [ref=e41]:
+          - generic [ref=e44]: ش
+          - heading "ابن عماد" [level=3] [ref=e45]
+          - generic [ref=e46]: کلاسیک
+          - generic [ref=e47]: 62 شعر
+      - link "ش ابن یمین کلاسیک 2139 شعر" [ref=e48] [cursor=pointer]:
+        - /url: /poets/106
+        - generic [ref=e49]:
+          - generic [ref=e52]: ش
+          - heading "ابن یمین" [level=3] [ref=e53]
+          - generic [ref=e54]: کلاسیک
+          - generic [ref=e55]: 2139 شعر
+      - link "ش ابوالحسن فراهانی کلاسیک 377 شعر" [ref=e56] [cursor=pointer]:
+        - /url: /poets/114
+        - generic [ref=e57]:
+          - generic [ref=e60]: ش
+          - heading "ابوالحسن فراهانی" [level=3] [ref=e61]
+          - generic [ref=e62]: کلاسیک
+          - generic [ref=e63]: 377 شعر
+      - link "ش ابوالفرج رونی کلاسیک 166 شعر" [ref=e64] [cursor=pointer]:
+        - /url: /poets/110
+        - generic [ref=e65]:
+          - generic [ref=e68]: ش
+          - heading "ابوالفرج رونی" [level=3] [ref=e69]
+          - generic [ref=e70]: کلاسیک
+          - generic [ref=e71]: 166 شعر
+      - link "ش ابوالفضل بیهقی کلاسیک 229 شعر" [ref=e72] [cursor=pointer]:
+        - /url: /poets/194
+        - generic [ref=e73]:
+          - generic [ref=e76]: ش
+          - heading "ابوالفضل بیهقی" [level=3] [ref=e77]
+          - generic [ref=e78]: کلاسیک
+          - generic [ref=e79]: 229 شعر
+      - link "ش ابوسعید ابوالخیر کلاسیک 786 شعر" [ref=e80] [cursor=pointer]:
+        - /url: /poets/26
+        - generic [ref=e81]:
+          - generic [ref=e84]: ش
+          - heading "ابوسعید ابوالخیر" [level=3] [ref=e85]
+          - generic [ref=e86]: کلاسیک
+          - generic [ref=e87]: 786 شعر
+      - link "ش ابوعلی عثمانی کلاسیک 190 شعر" [ref=e88] [cursor=pointer]:
+        - /url: /poets/101
+        - generic [ref=e89]:
+          - generic [ref=e92]: ش
+          - heading "ابوعلی عثمانی" [level=3] [ref=e93]
+          - generic [ref=e94]: کلاسیک
+          - generic [ref=e95]: 190 شعر
+      - link "ش اثیر اخسیکتی کلاسیک 464 شعر" [ref=e96] [cursor=pointer]:
+        - /url: /poets/143
+        - generic [ref=e97]:
+          - generic [ref=e100]: ش
+          - heading "اثیر اخسیکتی" [level=3] [ref=e101]
+          - generic [ref=e102]: کلاسیک
+          - generic [ref=e103]: 464 شعر
+      - link "ش احمد پروین کلاسیک 154 شعر" [ref=e104] [cursor=pointer]:
+        - /url: /poets/601
+        - generic [ref=e105]:
+          - generic [ref=e108]: ش
+          - heading "احمد پروین" [level=3] [ref=e109]
+          - generic [ref=e110]: کلاسیک
+          - generic [ref=e111]: 154 شعر
+      - link "ش احمد شاملو کلاسیک 323 شعر" [ref=e112] [cursor=pointer]:
+        - /url: /poets/502
+        - generic [ref=e113]:
+          - generic [ref=e116]: ش
+          - heading "احمد شاملو" [level=3] [ref=e117]
+          - generic [ref=e118]: کلاسیک
+          - generic [ref=e119]: 323 شعر
+      - link "ش ادیب الممالک کلاسیک 873 شعر" [ref=e120] [cursor=pointer]:
+        - /url: /poets/147
+        - generic [ref=e121]:
+          - generic [ref=e124]: ش
+          - heading "ادیب الممالک" [level=3] [ref=e125]
+          - generic [ref=e126]: کلاسیک
+          - generic [ref=e127]: 873 شعر
+      - link "ش ادیب صابر کلاسیک 432 شعر" [ref=e128] [cursor=pointer]:
+        - /url: /poets/156
+        - generic [ref=e129]:
+          - generic [ref=e132]: ش
+          - heading "ادیب صابر" [level=3] [ref=e133]
+          - generic [ref=e134]: کلاسیک
+          - generic [ref=e135]: 432 شعر
+      - link "ش ازرقی هروی کلاسیک 183 شعر" [ref=e136] [cursor=pointer]:
+        - /url: /poets/63
+        - generic [ref=e137]:
+          - generic [ref=e140]: ش
+          - heading "ازرقی هروی" [level=3] [ref=e141]
+          - generic [ref=e142]: کلاسیک
+          - generic [ref=e143]: 183 شعر
+      - link "ش اسدی توسی کلاسیک 144 شعر" [ref=e144] [cursor=pointer]:
+        - /url: /poets/52
+        - generic [ref=e145]:
+          - generic [ref=e148]: ش
+          - heading "اسدی توسی" [level=3] [ref=e149]
+          - generic [ref=e150]: کلاسیک
+          - generic [ref=e151]: 144 شعر
+      - link "ش اسیر شهرستانی کلاسیک 1204 شعر" [ref=e152] [cursor=pointer]:
+        - /url: /poets/130
+        - generic [ref=e153]:
+          - generic [ref=e156]: ش
+          - heading "اسیر شهرستانی" [level=3] [ref=e157]
+          - generic [ref=e158]: کلاسیک
+          - generic [ref=e159]: 1204 شعر
+      - link "ش اسیری لاهیجی کلاسیک 685 شعر" [ref=e160] [cursor=pointer]:
+        - /url: /poets/97
+        - generic [ref=e161]:
+          - generic [ref=e164]: ش
+          - heading "اسیری لاهیجی" [level=3] [ref=e165]
+          - generic [ref=e166]: کلاسیک
+          - generic [ref=e167]: 685 شعر
+      - link "ش افسرالملوک عاملی کلاسیک 35 شعر" [ref=e168] [cursor=pointer]:
+        - /url: /poets/92
+        - generic [ref=e169]:
+          - generic [ref=e172]: ش
+          - heading "افسرالملوک عاملی" [level=3] [ref=e173]
+          - generic [ref=e174]: کلاسیک
+          - generic [ref=e175]: 35 شعر
+      - link "ش افسر کرمانی کلاسیک 324 شعر" [ref=e176] [cursor=pointer]:
+        - /url: /poets/164
+        - generic [ref=e177]:
+          - generic [ref=e180]: ش
+          - heading "افسر کرمانی" [level=3] [ref=e181]
+          - generic [ref=e182]: کلاسیک
+          - generic [ref=e183]: 324 شعر
+      - link "ش اقبال لاهوری کلاسیک 972 شعر" [ref=e184] [cursor=pointer]:
+        - /url: /poets/42
+        - generic [ref=e185]:
+          - generic [ref=e188]: ش
+          - heading "اقبال لاهوری" [level=3] [ref=e189]
+          - generic [ref=e190]: کلاسیک
+          - generic [ref=e191]: 972 شعر
+      - link "ش الهامی کرمانشاهی کلاسیک 451 شعر" [ref=e192] [cursor=pointer]:
+        - /url: /poets/155
+        - generic [ref=e193]:
+          - generic [ref=e196]: ش
+          - heading "الهامی کرمانشاهی" [level=3] [ref=e197]
+          - generic [ref=e198]: کلاسیک
+          - generic [ref=e199]: 451 شعر
+      - link "ش الیار کلاسیک 632 شعر" [ref=e200] [cursor=pointer]:
+        - /url: /poets/615
+        - generic [ref=e201]:
+          - generic [ref=e204]: ش
+          - heading "الیار" [level=3] [ref=e205]
+          - generic [ref=e206]: کلاسیک
+          - generic [ref=e207]: 632 شعر
+      - link "ش امام خمینی کلاسیک 305 شعر" [ref=e208] [cursor=pointer]:
+        - /url: /poets/600
+        - generic [ref=e209]:
+          - generic [ref=e212]: ش
+          - heading "امام خمینی" [level=3] [ref=e213]
+          - generic [ref=e214]: کلاسیک
+          - generic [ref=e215]: 305 شعر
+      - link "ش امامی هروی کلاسیک 136 شعر" [ref=e216] [cursor=pointer]:
+        - /url: /poets/116
+        - generic [ref=e217]:
+          - generic [ref=e220]: ش
+          - heading "امامی هروی" [level=3] [ref=e221]
+          - generic [ref=e222]: کلاسیک
+          - generic [ref=e223]: 136 شعر
+      - link "ش امیر پازواری کلاسیک 633 شعر" [ref=e224] [cursor=pointer]:
+        - /url: /poets/195
+        - generic [ref=e225]:
+          - generic [ref=e228]: ش
+          - heading "امیر پازواری" [level=3] [ref=e229]
+          - generic [ref=e230]: کلاسیک
+          - generic [ref=e231]: 633 شعر
+      - link "ش امیر حسینی هروی کلاسیک 37 شعر" [ref=e232] [cursor=pointer]:
+        - /url: /poets/99
+        - generic [ref=e233]:
+          - generic [ref=e236]: ش
+          - heading "امیر حسینی هروی" [level=3] [ref=e237]
+          - generic [ref=e238]: کلاسیک
+          - generic [ref=e239]: 37 شعر
+      - link "ش امیرخسرو دهلوی کلاسیک 2198 شعر" [ref=e240] [cursor=pointer]:
+        - /url: /poets/34
+        - generic [ref=e241]:
+          - generic [ref=e244]: ش
+          - heading "امیرخسرو دهلوی" [level=3] [ref=e245]
+          - generic [ref=e246]: کلاسیک
+          - generic [ref=e247]: 2198 شعر
+      - link "ش امیر شاهی کلاسیک 219 شعر" [ref=e248] [cursor=pointer]:
+        - /url: /poets/103
+        - generic [ref=e249]:
+          - generic [ref=e252]: ش
+          - heading "امیر شاهی" [level=3] [ref=e253]
+          - generic [ref=e254]: کلاسیک
+          - generic [ref=e255]: 219 شعر
+      - link "ش امیرعلیشیر نوایی کلاسیک 380 شعر" [ref=e256] [cursor=pointer]:
+        - /url: /poets/151
+        - generic [ref=e257]:
+          - generic [ref=e260]: ش
+          - heading "امیرعلیشیر نوایی" [level=3] [ref=e261]
+          - generic [ref=e262]: کلاسیک
+          - generic [ref=e263]: 380 شعر
+      - link "ش امیر معزی کلاسیک 744 شعر" [ref=e264] [cursor=pointer]:
+        - /url: /poets/64
+        - generic [ref=e265]:
+          - generic [ref=e268]: ش
+          - heading "امیر معزی" [level=3] [ref=e269]
+          - generic [ref=e270]: کلاسیک
+          - generic [ref=e271]: 744 شعر
+      - link "ش انوری کلاسیک 1464 شعر" [ref=e272] [cursor=pointer]:
+        - /url: /poets/18
+        - generic [ref=e273]:
+          - generic [ref=e276]: ش
+          - heading "انوری" [level=3] [ref=e277]
+          - generic [ref=e278]: کلاسیک
+          - generic [ref=e279]: 1464 شعر
+      - link "ش اهلی شیرازی کلاسیک 2647 شعر" [ref=e280] [cursor=pointer]:
+        - /url: /poets/122
+        - generic [ref=e281]:
+          - generic [ref=e284]: ش
+          - heading "اهلی شیرازی" [level=3] [ref=e285]
+          - generic [ref=e286]: کلاسیک
+          - generic [ref=e287]: 2647 شعر
+      - link "ش اوحدالدین کرمانی کلاسیک 1762 شعر" [ref=e288] [cursor=pointer]:
+        - /url: /poets/117
+        - generic [ref=e289]:
+          - generic [ref=e292]: ش
+          - heading "اوحدالدین کرمانی" [level=3] [ref=e293]
+          - generic [ref=e294]: کلاسیک
+          - generic [ref=e295]: 1762 شعر
+      - link "ش اوحدی کلاسیک 1331 شعر" [ref=e296] [cursor=pointer]:
+        - /url: /poets/19
+        - generic [ref=e297]:
+          - generic [ref=e300]: ش
+          - heading "اوحدی" [level=3] [ref=e301]
+          - generic [ref=e302]: کلاسیک
+          - generic [ref=e303]: 1331 شعر
+      - link "ش ایرانشان کلاسیک 369 شعر" [ref=e304] [cursor=pointer]:
+        - /url: /poets/127
+        - generic [ref=e305]:
+          - generic [ref=e308]: ش
+          - heading "ایرانشان" [level=3] [ref=e309]
+          - generic [ref=e310]: کلاسیک
+          - generic [ref=e311]: 369 شعر
+      - link "ش ایرج میرزا کلاسیک 226 شعر" [ref=e312] [cursor=pointer]:
+        - /url: /poets/88
+        - generic [ref=e313]:
+          - generic [ref=e316]: ش
+          - heading "ایرج میرزا" [level=3] [ref=e317]
+          - generic [ref=e318]: کلاسیک
+          - generic [ref=e319]: 226 شعر
+      - link "ش باباافضل کاشانی کلاسیک 202 شعر" [ref=e320] [cursor=pointer]:
+        - /url: /poets/56
+        - generic [ref=e321]:
+          - generic [ref=e324]: ش
+          - heading "باباافضل کاشانی" [level=3] [ref=e325]
+          - generic [ref=e326]: کلاسیک
+          - generic [ref=e327]: 202 شعر
+      - link "ش باباطاهر کلاسیک 368 شعر" [ref=e328] [cursor=pointer]:
+        - /url: /poets/28
+        - generic [ref=e329]:
+          - generic [ref=e332]: ش
+          - heading "باباطاهر" [level=3] [ref=e333]
+          - generic [ref=e334]: کلاسیک
+          - generic [ref=e335]: 368 شعر
+      - link "ش بابافغانی کلاسیک 696 شعر" [ref=e336] [cursor=pointer]:
+        - /url: /poets/115
+        - generic [ref=e337]:
+          - generic [ref=e340]: ش
+          - heading "بابافغانی" [level=3] [ref=e341]
+          - generic [ref=e342]: کلاسیک
+          - generic [ref=e343]: 696 شعر
+      - link "ش باقر فداغی لارستانی کلاسیک 106 شعر" [ref=e344] [cursor=pointer]:
+        - /url: /poets/614
+        - generic [ref=e345]:
+          - generic [ref=e348]: ش
+          - heading "باقر فداغی لارستانی" [level=3] [ref=e349]
+          - generic [ref=e350]: کلاسیک
+          - generic [ref=e351]: 106 شعر
+      - link "ش بلند اقبال کلاسیک 754 شعر" [ref=e352] [cursor=pointer]:
+        - /url: /poets/173
+        - generic [ref=e353]:
+          - generic [ref=e356]: ش
+          - heading "بلند اقبال" [level=3] [ref=e357]
+          - generic [ref=e358]: کلاسیک
+          - generic [ref=e359]: 754 شعر
+      - link "ش بهاء ولد کلاسیک 50 شعر" [ref=e360] [cursor=pointer]:
+        - /url: /poets/193
+        - generic [ref=e361]:
+          - generic [ref=e364]: ش
+          - heading "بهاء ولد" [level=3] [ref=e365]
+          - generic [ref=e366]: کلاسیک
+          - generic [ref=e367]: 50 شعر
+      - link "ش بهرام سالکی کلاسیک 141 شعر" [ref=e368] [cursor=pointer]:
+        - /url: /poets/613
+        - generic [ref=e369]:
+          - generic [ref=e372]: ش
+          - heading "بهرام سالکی" [level=3] [ref=e373]
+          - generic [ref=e374]: کلاسیک
+          - generic [ref=e375]: 141 شعر
+      - link "ش بیدل دهلوی کلاسیک 2828 شعر" [ref=e376] [cursor=pointer]:
+        - /url: /poets/43
+        - generic [ref=e377]:
+          - generic [ref=e380]: ش
+          - heading "بیدل دهلوی" [level=3] [ref=e381]
+          - generic [ref=e382]: کلاسیک
+          - generic [ref=e383]: 2828 شعر
+      - link "ش پرویز ناتل خانلری کلاسیک 1 شعر" [ref=e384] [cursor=pointer]:
+        - /url: /poets/507
+        - generic [ref=e385]:
+          - generic [ref=e388]: ش
+          - heading "پرویز ناتل خانلری" [level=3] [ref=e389]
+          - generic [ref=e390]: کلاسیک
+          - generic [ref=e391]: 1 شعر
+      - link "ش پروین اعتصامی کلاسیک 223 شعر" [ref=e392] [cursor=pointer]:
+        - /url: /poets/8
+        - generic [ref=e393]:
+          - generic [ref=e396]: ش
+          - heading "پروین اعتصامی" [level=3] [ref=e397]
+          - generic [ref=e398]: کلاسیک
+          - generic [ref=e399]: 223 شعر
+      - link "ش پژمان بختیاری کلاسیک 32 شعر" [ref=e400] [cursor=pointer]:
+        - /url: /poets/618
+        - generic [ref=e401]:
+          - generic [ref=e404]: ش
+          - heading "پژمان بختیاری" [level=3] [ref=e405]
+          - generic [ref=e406]: کلاسیک
+          - generic [ref=e407]: 32 شعر
+      - link "ش ترکی شیرازی کلاسیک 371 شعر" [ref=e408] [cursor=pointer]:
+        - /url: /poets/189
+        - generic [ref=e409]:
+          - generic [ref=e412]: ش
+          - heading "ترکی شیرازی" [level=3] [ref=e413]
+          - generic [ref=e414]: کلاسیک
+          - generic [ref=e415]: 371 شعر
+      - link "ش جامی کلاسیک 3391 شعر" [ref=e416] [cursor=pointer]:
+        - /url: /poets/24
+        - generic [ref=e417]:
+          - generic [ref=e420]: ش
+          - heading "جامی" [level=3] [ref=e421]
+          - generic [ref=e422]: کلاسیک
+          - generic [ref=e423]: 3391 شعر
+      - link "ش جلال عضد کلاسیک 401 شعر" [ref=e424] [cursor=pointer]:
+        - /url: /poets/85
+        - generic [ref=e425]:
+          - generic [ref=e428]: ش
+          - heading "جلال عضد" [level=3] [ref=e429]
+          - generic [ref=e430]: کلاسیک
+          - generic [ref=e431]: 401 شعر
+      - link "ش جمال‌الدین عبدالرزاق کلاسیک 602 شعر" [ref=e432] [cursor=pointer]:
+        - /url: /poets/107
+        - generic [ref=e433]:
+          - generic [ref=e436]: ش
+          - heading "جمال‌الدین عبدالرزاق" [level=3] [ref=e437]
+          - generic [ref=e438]: کلاسیک
+          - generic [ref=e439]: 602 شعر
+      - link "ش جهان ملک خاتون کلاسیک 1809 شعر" [ref=e440] [cursor=pointer]:
+        - /url: /poets/137
+        - generic [ref=e441]:
+          - generic [ref=e444]: ش
+          - heading "جهان ملک خاتون" [level=3] [ref=e445]
+          - generic [ref=e446]: کلاسیک
+          - generic [ref=e447]: 1809 شعر
+      - link "ش جویای تبریزی کلاسیک 1284 شعر" [ref=e448] [cursor=pointer]:
+        - /url: /poets/121
+        - generic [ref=e449]:
+          - generic [ref=e452]: ش
+          - heading "جویای تبریزی" [level=3] [ref=e453]
+          - generic [ref=e454]: کلاسیک
+          - generic [ref=e455]: 1284 شعر
+      - link "ش جیحون یزدی کلاسیک 215 شعر" [ref=e456] [cursor=pointer]:
+        - /url: /poets/178
+        - generic [ref=e457]:
+          - generic [ref=e460]: ش
+          - heading "جیحون یزدی" [level=3] [ref=e461]
+          - generic [ref=e462]: کلاسیک
+          - generic [ref=e463]: 215 شعر
+      - link "ش حاجب شیرازی کلاسیک 157 شعر" [ref=e464] [cursor=pointer]:
+        - /url: /poets/190
+        - generic [ref=e465]:
+          - generic [ref=e468]: ش
+          - heading "حاجب شیرازی" [level=3] [ref=e469]
+          - generic [ref=e470]: کلاسیک
+          - generic [ref=e471]: 157 شعر
+      - link "ش حافظ کلاسیک 632 شعر" [ref=e472] [cursor=pointer]:
+        - /url: /poets/2
+        - generic [ref=e473]:
+          - generic [ref=e476]: ش
+          - heading "حافظ" [level=3] [ref=e477]
+          - generic [ref=e478]: کلاسیک
+          - generic [ref=e479]: 632 شعر
+      - link "ش حزین لاهیجی کلاسیک 1774 شعر" [ref=e480] [cursor=pointer]:
+        - /url: /poets/76
+        - generic [ref=e481]:
+          - generic [ref=e484]: ش
+          - heading "حزین لاهیجی" [level=3] [ref=e485]
+          - generic [ref=e486]: کلاسیک
+          - generic [ref=e487]: 1774 شعر
+      - link "ش حسین خوارزمی کلاسیک 278 شعر" [ref=e488] [cursor=pointer]:
+        - /url: /poets/89
+        - generic [ref=e489]:
+          - generic [ref=e492]: ش
+          - heading "حسین خوارزمی" [level=3] [ref=e493]
+          - generic [ref=e494]: کلاسیک
+          - generic [ref=e495]: 278 شعر
+      - link "ش حکیم سبزواری کلاسیک 209 شعر" [ref=e496] [cursor=pointer]:
+        - /url: /poets/80
+        - generic [ref=e497]:
+          - generic [ref=e500]: ش
+          - heading "حکیم سبزواری" [level=3] [ref=e501]
+          - generic [ref=e502]: کلاسیک
+          - generic [ref=e503]: 209 شعر
+      - link "ش حکیم نزاری کلاسیک 1642 شعر" [ref=e504] [cursor=pointer]:
+        - /url: /poets/65
+        - generic [ref=e505]:
+          - generic [ref=e508]: ش
+          - heading "حکیم نزاری" [level=3] [ref=e509]
+          - generic [ref=e510]: کلاسیک
+          - generic [ref=e511]: 1642 شعر
+      - link "ش حمیدالدین بلخی کلاسیک 30 شعر" [ref=e512] [cursor=pointer]:
+        - /url: /poets/162
+        - generic [ref=e513]:
+          - generic [ref=e516]: ش
+          - heading "حمیدالدین بلخی" [level=3] [ref=e517]
+          - generic [ref=e518]: کلاسیک
+          - generic [ref=e519]: 30 شعر
+      - link "ش حمید مصدق کلاسیک 122 شعر" [ref=e520] [cursor=pointer]:
+        - /url: /poets/517
+        - generic [ref=e521]:
+          - generic [ref=e524]: ش
+          - heading "حمید مصدق" [level=3] [ref=e525]
+          - generic [ref=e526]: کلاسیک
+          - generic [ref=e527]: 122 شعر
+      - link "ش حیدر شیرازی کلاسیک 86 شعر" [ref=e528] [cursor=pointer]:
+        - /url: /poets/131
+        - generic [ref=e529]:
+          - generic [ref=e532]: ش
+          - heading "حیدر شیرازی" [level=3] [ref=e533]
+          - generic [ref=e534]: کلاسیک
+          - generic [ref=e535]: 86 شعر
+      - link "ش خاقانی کلاسیک 1364 شعر" [ref=e536] [cursor=pointer]:
+        - /url: /poets/16
+        - generic [ref=e537]:
+          - generic [ref=e540]: ش
+          - heading "خاقانی" [level=3] [ref=e541]
+          - generic [ref=e542]: کلاسیک
+          - generic [ref=e543]: 1364 شعر
+      - link "ش خالد نقشبندی کلاسیک 152 شعر" [ref=e544] [cursor=pointer]:
+        - /url: /poets/104
+        - generic [ref=e545]:
+          - generic [ref=e548]: ش
+          - heading "خالد نقشبندی" [level=3] [ref=e549]
+          - generic [ref=e550]: کلاسیک
+          - generic [ref=e551]: 152 شعر
+      - link "ش خسرو گلسرخی کلاسیک 54 شعر" [ref=e552] [cursor=pointer]:
+        - /url: /poets/610
+        - generic [ref=e553]:
+          - generic [ref=e556]: ش
+          - heading "خسرو گلسرخی" [level=3] [ref=e557]
+          - generic [ref=e558]: کلاسیک
+          - generic [ref=e559]: 54 شعر
+      - link "ش خلیل‌الله خلیلی کلاسیک 54 شعر" [ref=e560] [cursor=pointer]:
+        - /url: /poets/48
+        - generic [ref=e561]:
+          - generic [ref=e564]: ش
+          - heading "خلیل‌الله خلیلی" [level=3] [ref=e565]
+          - generic [ref=e566]: کلاسیک
+          - generic [ref=e567]: 54 شعر
+      - link "ش خواجه عبدالله انصاری کلاسیک 1103 شعر" [ref=e568] [cursor=pointer]:
+        - /url: /poets/72
+        - generic [ref=e569]:
+          - generic [ref=e572]: ش
+          - heading "خواجه عبدالله انصاری" [level=3] [ref=e573]
+          - generic [ref=e574]: کلاسیک
+          - generic [ref=e575]: 1103 شعر
+      - link "ش خواجه نصیرالدین طوسی کلاسیک 36 شعر" [ref=e576] [cursor=pointer]:
+        - /url: /poets/161
+        - generic [ref=e577]:
+          - generic [ref=e580]: ش
+          - heading "خواجه نصیرالدین طوسی" [level=3] [ref=e581]
+          - generic [ref=e582]: کلاسیک
+          - generic [ref=e583]: 36 شعر
+      - link "ش خواجوی کرمانی کلاسیک 1828 شعر" [ref=e584] [cursor=pointer]:
+        - /url: /poets/20
+        - generic [ref=e585]:
+          - generic [ref=e588]: ش
+          - heading "خواجوی کرمانی" [level=3] [ref=e589]
+          - generic [ref=e590]: کلاسیک
+          - generic [ref=e591]: 1828 شعر
+      - link "ش خیالی بخارایی کلاسیک 399 شعر" [ref=e592] [cursor=pointer]:
+        - /url: /poets/118
+        - generic [ref=e593]:
+          - generic [ref=e596]: ش
+          - heading "خیالی بخارایی" [level=3] [ref=e597]
+          - generic [ref=e598]: کلاسیک
+          - generic [ref=e599]: 399 شعر
+      - link "ش خیام کلاسیک 366 شعر" [ref=e600] [cursor=pointer]:
+        - /url: /poets/3
+        - generic [ref=e601]:
+          - generic [ref=e604]: ش
+          - heading "خیام" [level=3] [ref=e605]
+          - generic [ref=e606]: کلاسیک
+          - generic [ref=e607]: 366 شعر
+      - link "ش داوود ملک‌زاده کلاسیک 88 شعر" [ref=e608] [cursor=pointer]:
+        - /url: /poets/622
+        - generic [ref=e609]:
+          - generic [ref=e612]: ش
+          - heading "داوود ملک‌زاده" [level=3] [ref=e613]
+          - generic [ref=e614]: کلاسیک
+          - generic [ref=e615]: 88 شعر
+      - link "ش دقیقی کلاسیک 30 شعر" [ref=e616] [cursor=pointer]:
+        - /url: /poets/112
+        - generic [ref=e617]:
+          - generic [ref=e620]: ش
+          - heading "دقیقی" [level=3] [ref=e621]
+          - generic [ref=e622]: کلاسیک
+          - generic [ref=e623]: 30 شعر
+      - link "ش رشحه کلاسیک 29 شعر" [ref=e624] [cursor=pointer]:
+        - /url: /poets/36
+        - generic [ref=e625]:
+          - generic [ref=e628]: ش
+          - heading "رشحه" [level=3] [ref=e629]
+          - generic [ref=e630]: کلاسیک
+          - generic [ref=e631]: 29 شعر
+      - link "ش رضاقلی خان هدایت کلاسیک 351 شعر" [ref=e632] [cursor=pointer]:
+        - /url: /poets/93
+        - generic [ref=e633]:
+          - generic [ref=e636]: ش
+          - heading "رضاقلی خان هدایت" [level=3] [ref=e637]
+          - generic [ref=e638]: کلاسیک
+          - generic [ref=e639]: 351 شعر
+      - link "ش رضی‌الدین آرتیمانی کلاسیک 233 شعر" [ref=e640] [cursor=pointer]:
+        - /url: /poets/47
+        - generic [ref=e641]:
+          - generic [ref=e644]: ش
+          - heading "رضی‌الدین آرتیمانی" [level=3] [ref=e645]
+          - generic [ref=e646]: کلاسیک
+          - generic [ref=e647]: 233 شعر
+      - link "ش رفیق اصفهانی کلاسیک 363 شعر" [ref=e648] [cursor=pointer]:
+        - /url: /poets/167
+        - generic [ref=e649]:
+          - generic [ref=e652]: ش
+          - heading "رفیق اصفهانی" [level=3] [ref=e653]
+          - generic [ref=e654]: کلاسیک
+          - generic [ref=e655]: 363 شعر
+      - link "ش رهی معیری کلاسیک 249 شعر" [ref=e656] [cursor=pointer]:
+        - /url: /poets/41
+        - generic [ref=e657]:
+          - generic [ref=e660]: ش
+          - heading "رهی معیری" [level=3] [ref=e661]
+          - generic [ref=e662]: کلاسیک
+          - generic [ref=e663]: 249 شعر
+      - link "ش رودکی کلاسیک 539 شعر" [ref=e664] [cursor=pointer]:
+        - /url: /poets/12
+        - generic [ref=e665]:
+          - generic [ref=e668]: ش
+          - heading "رودکی" [level=3] [ref=e669]
+          - generic [ref=e670]: کلاسیک
+          - generic [ref=e671]: 539 شعر
+      - link "ش زرتشت کلاسیک 98 شعر" [ref=e672] [cursor=pointer]:
+        - /url: /poets/998
+        - generic [ref=e673]:
+          - generic [ref=e676]: ش
+          - heading "زرتشت" [level=3] [ref=e677]
+          - generic [ref=e678]: کلاسیک
+          - generic [ref=e679]: 98 شعر
+      - link "ش سام میرزا صفوی کلاسیک 711 شعر" [ref=e680] [cursor=pointer]:
+        - /url: /poets/197
+        - generic [ref=e681]:
+          - generic [ref=e684]: ش
+          - heading "سام میرزا صفوی" [level=3] [ref=e685]
+          - generic [ref=e686]: کلاسیک
+          - generic [ref=e687]: 711 شعر
+      - link "ش سایه کلاسیک 328 شعر" [ref=e688] [cursor=pointer]:
+        - /url: /poets/514
+        - generic [ref=e689]:
+          - generic [ref=e692]: ش
+          - heading "سایه" [level=3] [ref=e693]
+          - generic [ref=e694]: کلاسیک
+          - generic [ref=e695]: 328 شعر
+      - link "ش سبحان گنجی کلاسیک 85 شعر" [ref=e696] [cursor=pointer]:
+        - /url: /poets/626
+        - generic [ref=e697]:
+          - generic [ref=e700]: ش
+          - heading "سبحان گنجی" [level=3] [ref=e701]
+          - generic [ref=e702]: کلاسیک
+          - generic [ref=e703]: 85 شعر
+      - link "ش سحاب اصفهانی کلاسیک 412 شعر" [ref=e704] [cursor=pointer]:
+        - /url: /poets/135
+        - generic [ref=e705]:
+          - generic [ref=e708]: ش
+          - heading "سحاب اصفهانی" [level=3] [ref=e709]
+          - generic [ref=e710]: کلاسیک
+          - generic [ref=e711]: 412 شعر
+      - link "ش سراج قمری کلاسیک 62 شعر" [ref=e712] [cursor=pointer]:
+        - /url: /poets/166
+        - generic [ref=e713]:
+          - generic [ref=e716]: ش
+          - heading "سراج قمری" [level=3] [ref=e717]
+          - generic [ref=e718]: کلاسیک
+          - generic [ref=e719]: 62 شعر
+      - link "ش سرایندهٔ فرامرزنامه کلاسیک 192 شعر" [ref=e720] [cursor=pointer]:
+        - /url: /poets/126
+        - generic [ref=e721]:
+          - generic [ref=e724]: ش
+          - heading "سرایندهٔ فرامرزنامه" [level=3] [ref=e725]
+          - generic [ref=e726]: کلاسیک
+          - generic [ref=e727]: 192 شعر
+      - link "ش سعدالدین وراوینی کلاسیک 81 شعر" [ref=e728] [cursor=pointer]:
+        - /url: /poets/66
+        - generic [ref=e729]:
+          - generic [ref=e732]: ش
+          - heading "سعدالدین وراوینی" [level=3] [ref=e733]
+          - generic [ref=e734]: کلاسیک
+          - generic [ref=e735]: 81 شعر
+      - link "ش سعدی کلاسیک 1946 شعر" [ref=e736] [cursor=pointer]:
+        - /url: /poets/7
+        - generic [ref=e737]:
+          - generic [ref=e740]: ش
+          - heading "سعدی" [level=3] [ref=e741]
+          - generic [ref=e742]: کلاسیک
+          - generic [ref=e743]: 1946 شعر
+      - link "ش سعیدا کلاسیک 769 شعر" [ref=e744] [cursor=pointer]:
+        - /url: /poets/128
+        - generic [ref=e745]:
+          - generic [ref=e748]: ش
+          - heading "سعیدا" [level=3] [ref=e749]
+          - generic [ref=e750]: کلاسیک
+          - generic [ref=e751]: 769 شعر
+      - link "ش سلطان باهو کلاسیک 54 شعر" [ref=e752] [cursor=pointer]:
+        - /url: /poets/105
+        - generic [ref=e753]:
+          - generic [ref=e756]: ش
+          - heading "سلطان باهو" [level=3] [ref=e757]
+          - generic [ref=e758]: کلاسیک
+          - generic [ref=e759]: 54 شعر
+      - link "ش سلطان ولد کلاسیک 171 شعر" [ref=e760] [cursor=pointer]:
+        - /url: /poets/91
+        - generic [ref=e761]:
+          - generic [ref=e764]: ش
+          - heading "سلطان ولد" [level=3] [ref=e765]
+          - generic [ref=e766]: کلاسیک
+          - generic [ref=e767]: 171 شعر
+      - link "ش سلمان ساوجی کلاسیک 897 شعر" [ref=e768] [cursor=pointer]:
+        - /url: /poets/40
+        - generic [ref=e769]:
+          - generic [ref=e772]: ش
+          - heading "سلمان ساوجی" [level=3] [ref=e773]
+          - generic [ref=e774]: کلاسیک
+          - generic [ref=e775]: 897 شعر
+      - link "ش سلیم تهرانی کلاسیک 1125 شعر" [ref=e776] [cursor=pointer]:
+        - /url: /poets/120
+        - generic [ref=e777]:
+          - generic [ref=e780]: ش
+          - heading "سلیم تهرانی" [level=3] [ref=e781]
+          - generic [ref=e782]: کلاسیک
+          - generic [ref=e783]: 1125 شعر
+      - link "ش سلیمی جرونی کلاسیک 97 شعر" [ref=e784] [cursor=pointer]:
+        - /url: /poets/133
+        - generic [ref=e785]:
+          - generic [ref=e788]: ش
+          - heading "سلیمی جرونی" [level=3] [ref=e789]
+          - generic [ref=e790]: کلاسیک
+          - generic [ref=e791]: 97 شعر
+      - link "ش سنایی کلاسیک 1798 شعر" [ref=e792] [cursor=pointer]:
+        - /url: /poets/10
+        - generic [ref=e793]:
+          - generic [ref=e796]: ش
+          - heading "سنایی" [level=3] [ref=e797]
+          - generic [ref=e798]: کلاسیک
+          - generic [ref=e799]: 1798 شعر
+      - link "ش سهراب سپهری کلاسیک 136 شعر" [ref=e800] [cursor=pointer]:
+        - /url: /poets/503
+        - generic [ref=e801]:
+          - generic [ref=e804]: ش
+          - heading "سهراب سپهری" [level=3] [ref=e805]
+          - generic [ref=e806]: کلاسیک
+          - generic [ref=e807]: 136 شعر
+      - link "ش سوزنی سمرقندی کلاسیک 510 شعر" [ref=e808] [cursor=pointer]:
+        - /url: /poets/177
+        - generic [ref=e809]:
+          - generic [ref=e812]: ش
+          - heading "سوزنی سمرقندی" [level=3] [ref=e813]
+          - generic [ref=e814]: کلاسیک
+          - generic [ref=e815]: 510 شعر
+      - link "ش سیاوش کسرایی کلاسیک 168 شعر" [ref=e816] [cursor=pointer]:
+        - /url: /poets/518
+        - generic [ref=e817]:
+          - generic [ref=e820]: ش
+          - heading "سیاوش کسرایی" [level=3] [ref=e821]
+          - generic [ref=e822]: کلاسیک
+          - generic [ref=e823]: 168 شعر
+      - link "ش سیدای نسفی کلاسیک 1077 شعر" [ref=e824] [cursor=pointer]:
+        - /url: /poets/181
+        - generic [ref=e825]:
+          - generic [ref=e828]: ش
+          - heading "سیدای نسفی" [level=3] [ref=e829]
+          - generic [ref=e830]: کلاسیک
+          - generic [ref=e831]: 1077 شعر
+      - link "ش سید حامد احمدی کلاسیک 22 شعر" [ref=e832] [cursor=pointer]:
+        - /url: /poets/625
+        - generic [ref=e833]:
+          - generic [ref=e836]: ش
+          - heading "سید حامد احمدی" [level=3] [ref=e837]
+          - generic [ref=e838]: کلاسیک
+          - generic [ref=e839]: 22 شعر
+      - link "ش سید حسن غزنوی کلاسیک 436 شعر" [ref=e840] [cursor=pointer]:
+        - /url: /poets/144
+        - generic [ref=e841]:
+          - generic [ref=e844]: ش
+          - heading "سید حسن غزنوی" [level=3] [ref=e845]
+          - generic [ref=e846]: کلاسیک
+          - generic [ref=e847]: 436 شعر
+      - link "ش سید حمیدرضا برقعی کلاسیک 21 شعر" [ref=e848] [cursor=pointer]:
+        - /url: /poets/604
+        - generic [ref=e849]:
+          - generic [ref=e852]: ش
+          - heading "سید حمیدرضا برقعی" [level=3] [ref=e853]
+          - generic [ref=e854]: کلاسیک
+          - generic [ref=e855]: 21 شعر
+      - link "ش سیف فرغانی کلاسیک 736 شعر" [ref=e856] [cursor=pointer]:
+        - /url: /poets/31
+        - generic [ref=e857]:
+          - generic [ref=e860]: ش
+          - heading "سیف فرغانی" [level=3] [ref=e861]
+          - generic [ref=e862]: کلاسیک
+          - generic [ref=e863]: 736 شعر
+      - link "ش سیمین بهبهانی کلاسیک 226 شعر" [ref=e864] [cursor=pointer]:
+        - /url: /poets/505
+        - generic [ref=e865]:
+          - generic [ref=e868]: ش
+          - heading "سیمین بهبهانی" [level=3] [ref=e869]
+          - generic [ref=e870]: کلاسیک
+          - generic [ref=e871]: 226 شعر
+      - link "ش شاطر عباس صبوحی کلاسیک 98 شعر" [ref=e872] [cursor=pointer]:
+        - /url: /poets/55
+        - generic [ref=e873]:
+          - generic [ref=e876]: ش
+          - heading "شاطر عباس صبوحی" [level=3] [ref=e877]
+          - generic [ref=e878]: کلاسیک
+          - generic [ref=e879]: 98 شعر
+      - link "ش شاه اسماعیل صفوی (خطایی) کلاسیک 31 شعر" [ref=e880] [cursor=pointer]:
+        - /url: /poets/612
+        - generic [ref=e881]:
+          - generic [ref=e884]: ش
+          - heading "شاه اسماعیل صفوی (خطایی)" [level=3] [ref=e885]
+          - generic [ref=e886]: کلاسیک
+          - generic [ref=e887]: 31 شعر
+      - link "ش شاهدی کلاسیک 123 شعر" [ref=e888] [cursor=pointer]:
+        - /url: /poets/83
+        - generic [ref=e889]:
+          - generic [ref=e892]: ش
+          - heading "شاهدی" [level=3] [ref=e893]
+          - generic [ref=e894]: کلاسیک
+          - generic [ref=e895]: 123 شعر
+      - link "ش شاه نعمت‌الله ولی کلاسیک 2701 شعر" [ref=e896] [cursor=pointer]:
+        - /url: /poets/51
+        - generic [ref=e897]:
+          - generic [ref=e900]: ش
+          - heading "شاه نعمت‌الله ولی" [level=3] [ref=e901]
+          - generic [ref=e902]: کلاسیک
+          - generic [ref=e903]: 2701 شعر
+      - link "ش شمس مغربی کلاسیک 262 شعر" [ref=e904] [cursor=pointer]:
+        - /url: /poets/78
+        - generic [ref=e905]:
+          - generic [ref=e908]: ش
+          - heading "شمس مغربی" [level=3] [ref=e909]
+          - generic [ref=e910]: کلاسیک
+          - generic [ref=e911]: 262 شعر
+      - link "ش شهریار کلاسیک 192 شعر" [ref=e912] [cursor=pointer]:
+        - /url: /poets/35
+        - generic [ref=e913]:
+          - generic [ref=e916]: ش
+          - heading "شهریار" [level=3] [ref=e917]
+          - generic [ref=e918]: کلاسیک
+          - generic [ref=e919]: 192 شعر
+      - link "ش شیخ بهایی کلاسیک 285 شعر" [ref=e920] [cursor=pointer]:
+        - /url: /poets/30
+        - generic [ref=e921]:
+          - generic [ref=e924]: ش
+          - heading "شیخ بهایی" [level=3] [ref=e925]
+          - generic [ref=e926]: کلاسیک
+          - generic [ref=e927]: 285 شعر
+      - link "ش شیخ محمود شبستری کلاسیک 248 شعر" [ref=e928] [cursor=pointer]:
+        - /url: /poets/23
+        - generic [ref=e929]:
+          - generic [ref=e932]: ش
+          - heading "شیخ محمود شبستری" [level=3] [ref=e933]
+          - generic [ref=e934]: کلاسیک
+          - generic [ref=e935]: 248 شعر
+      - link "ش شیوا فرازمند کلاسیک 206 شعر" [ref=e936] [cursor=pointer]:
+        - /url: /poets/624
+        - generic [ref=e937]:
+          - generic [ref=e940]: ش
+          - heading "شیوا فرازمند" [level=3] [ref=e941]
+          - generic [ref=e942]: کلاسیک
+          - generic [ref=e943]: 206 شعر
+      - link "ش شیون فومنی کلاسیک 119 شعر" [ref=e944] [cursor=pointer]:
+        - /url: /poets/608
+        - generic [ref=e945]:
+          - generic [ref=e948]: ش
+          - heading "شیون فومنی" [level=3] [ref=e949]
+          - generic [ref=e950]: کلاسیک
+          - generic [ref=e951]: 119 شعر
+      - link "ش صائب تبریزی کلاسیک 9877 شعر" [ref=e952] [cursor=pointer]:
+        - /url: /poets/22
+        - generic [ref=e953]:
+          - generic [ref=e956]: ش
+          - heading "صائب تبریزی" [level=3] [ref=e957]
+          - generic [ref=e958]: کلاسیک
+          - generic [ref=e959]: 9877 شعر
+      - link "ش صابر همدانی کلاسیک 62 شعر" [ref=e960] [cursor=pointer]:
+        - /url: /poets/174
+        - generic [ref=e961]:
+          - generic [ref=e964]: ش
+          - heading "صابر همدانی" [level=3] [ref=e965]
+          - generic [ref=e966]: کلاسیک
+          - generic [ref=e967]: 62 شعر
+      - link "ش صادق سرمد کلاسیک 34 شعر" [ref=e968] [cursor=pointer]:
+        - /url: /poets/616
+        - generic [ref=e969]:
+          - generic [ref=e972]: ش
+          - heading "صادق سرمد" [level=3] [ref=e973]
+          - generic [ref=e974]: کلاسیک
+          - generic [ref=e975]: 34 شعر
+      - link "ش صادق هدایت کلاسیک 18 شعر" [ref=e976] [cursor=pointer]:
+        - /url: /poets/701
+        - generic [ref=e977]:
+          - generic [ref=e980]: ش
+          - heading "صادق هدایت" [level=3] [ref=e981]
+          - generic [ref=e982]: کلاسیک
+          - generic [ref=e983]: 18 شعر
+      - link "ش صامت بروجردی کلاسیک 425 شعر" [ref=e984] [cursor=pointer]:
+        - /url: /poets/74
+        - generic [ref=e985]:
+          - generic [ref=e988]: ش
+          - heading "صامت بروجردی" [level=3] [ref=e989]
+          - generic [ref=e990]: کلاسیک
+          - generic [ref=e991]: 425 شعر
+      - link "ش صغیر اصفهانی کلاسیک 822 شعر" [ref=e992] [cursor=pointer]:
+        - /url: /poets/182
+        - generic [ref=e993]:
+          - generic [ref=e996]: ش
+          - heading "صغیر اصفهانی" [level=3] [ref=e997]
+          - generic [ref=e998]: کلاسیک
+          - generic [ref=e999]: 822 شعر
+      - link "ش صفای اصفهانی کلاسیک 217 شعر" [ref=e1000] [cursor=pointer]:
+        - /url: /poets/108
+        - generic [ref=e1001]:
+          - generic [ref=e1004]: ش
+          - heading "صفای اصفهانی" [level=3] [ref=e1005]
+          - generic [ref=e1006]: کلاسیک
+          - generic [ref=e1007]: 217 شعر
+      - link "ش صفایی جندقی کلاسیک 748 شعر" [ref=e1008] [cursor=pointer]:
+        - /url: /poets/168
+        - generic [ref=e1009]:
+          - generic [ref=e1012]: ش
+          - heading "صفایی جندقی" [level=3] [ref=e1013]
+          - generic [ref=e1014]: کلاسیک
+          - generic [ref=e1015]: 748 شعر
+      - link "ش صفی علیشاه کلاسیک 881 شعر" [ref=e1016] [cursor=pointer]:
+        - /url: /poets/187
+        - generic [ref=e1017]:
+          - generic [ref=e1020]: ش
+          - heading "صفی علیشاه" [level=3] [ref=e1021]
+          - generic [ref=e1022]: کلاسیک
+          - generic [ref=e1023]: 881 شعر
+      - link "ش صوفی محمد هروی کلاسیک 251 شعر" [ref=e1024] [cursor=pointer]:
+        - /url: /poets/188
+        - generic [ref=e1025]:
+          - generic [ref=e1028]: ش
+          - heading "صوفی محمد هروی" [level=3] [ref=e1029]
+          - generic [ref=e1030]: کلاسیک
+          - generic [ref=e1031]: 251 شعر
+      - link "ش طبیب اصفهانی کلاسیک 240 شعر" [ref=e1032] [cursor=pointer]:
+        - /url: /poets/138
+        - generic [ref=e1033]:
+          - generic [ref=e1036]: ش
+          - heading "طبیب اصفهانی" [level=3] [ref=e1037]
+          - generic [ref=e1038]: کلاسیک
+          - generic [ref=e1039]: 240 شعر
+      - link "ش طغرای مشهدی کلاسیک 841 شعر" [ref=e1040] [cursor=pointer]:
+        - /url: /poets/184
+        - generic [ref=e1041]:
+          - generic [ref=e1044]: ش
+          - heading "طغرای مشهدی" [level=3] [ref=e1045]
+          - generic [ref=e1046]: کلاسیک
+          - generic [ref=e1047]: 841 شعر
+      - link "ش طغرل احراری کلاسیک 326 شعر" [ref=e1048] [cursor=pointer]:
+        - /url: /poets/150
+        - generic [ref=e1049]:
+          - generic [ref=e1052]: ش
+          - heading "طغرل احراری" [level=3] [ref=e1053]
+          - generic [ref=e1054]: کلاسیک
+          - generic [ref=e1055]: 326 شعر
+      - link "ش ظهیر فاریابی کلاسیک 306 شعر" [ref=e1056] [cursor=pointer]:
+        - /url: /poets/69
+        - generic [ref=e1057]:
+          - generic [ref=e1060]: ش
+          - heading "ظهیر فاریابی" [level=3] [ref=e1061]
+          - generic [ref=e1062]: کلاسیک
+          - generic [ref=e1063]: 306 شعر
+      - link "ش ظهیری سمرقندی کلاسیک 54 شعر" [ref=e1064] [cursor=pointer]:
+        - /url: /poets/192
+        - generic [ref=e1065]:
+          - generic [ref=e1068]: ش
+          - heading "ظهیری سمرقندی" [level=3] [ref=e1069]
+          - generic [ref=e1070]: کلاسیک
+          - generic [ref=e1071]: 54 شعر
+      - link "ش عارف قزوینی کلاسیک 160 شعر" [ref=e1072] [cursor=pointer]:
+        - /url: /poets/68
+        - generic [ref=e1073]:
+          - generic [ref=e1076]: ش
+          - heading "عارف قزوینی" [level=3] [ref=e1077]
+          - generic [ref=e1078]: کلاسیک
+          - generic [ref=e1079]: 160 شعر
+      - link "ش عبادی مروزی کلاسیک 30 شعر" [ref=e1080] [cursor=pointer]:
+        - /url: /poets/95
+        - generic [ref=e1081]:
+          - generic [ref=e1084]: ش
+          - heading "عبادی مروزی" [level=3] [ref=e1085]
+          - generic [ref=e1086]: کلاسیک
+          - generic [ref=e1087]: 30 شعر
+      - link "ش عبدالقادر گیلانی کلاسیک 74 شعر" [ref=e1088] [cursor=pointer]:
+        - /url: /poets/70
+        - generic [ref=e1089]:
+          - generic [ref=e1092]: ش
+          - heading "عبدالقادر گیلانی" [level=3] [ref=e1093]
+          - generic [ref=e1094]: کلاسیک
+          - generic [ref=e1095]: 74 شعر
+      - link "ش عبدالقهّار عاصی کلاسیک 88 شعر" [ref=e1096] [cursor=pointer]:
+        - /url: /poets/512
+        - generic [ref=e1097]:
+          - generic [ref=e1100]: ش
+          - heading "عبدالقهّار عاصی" [level=3] [ref=e1101]
+          - generic [ref=e1102]: کلاسیک
+          - generic [ref=e1103]: 88 شعر
+      - link "ش عبدالواسع جبلی کلاسیک 7 شعر" [ref=e1104] [cursor=pointer]:
+        - /url: /poets/37
+        - generic [ref=e1105]:
+          - generic [ref=e1108]: ش
+          - heading "عبدالواسع جبلی" [level=3] [ref=e1109]
+          - generic [ref=e1110]: کلاسیک
+          - generic [ref=e1111]: 7 شعر
+      - link "ش عبید زاکانی کلاسیک 280 شعر" [ref=e1112] [cursor=pointer]:
+        - /url: /poets/33
+        - generic [ref=e1113]:
+          - generic [ref=e1116]: ش
+          - heading "عبید زاکانی" [level=3] [ref=e1117]
+          - generic [ref=e1118]: کلاسیک
+          - generic [ref=e1119]: 280 شعر
+      - link "ش عثمان مختاری کلاسیک 123 شعر" [ref=e1120] [cursor=pointer]:
+        - /url: /poets/109
+        - generic [ref=e1121]:
+          - generic [ref=e1124]: ش
+          - heading "عثمان مختاری" [level=3] [ref=e1125]
+          - generic [ref=e1126]: کلاسیک
+          - generic [ref=e1127]: 123 شعر
+      - link "ش عراقی کلاسیک 613 شعر" [ref=e1128] [cursor=pointer]:
+        - /url: /poets/21
+        - generic [ref=e1129]:
+          - generic [ref=e1132]: ش
+          - heading "عراقی" [level=3] [ref=e1133]
+          - generic [ref=e1134]: کلاسیک
+          - generic [ref=e1135]: 613 شعر
+      - link "ش عرفی کلاسیک 829 شعر" [ref=e1136] [cursor=pointer]:
+        - /url: /poets/46
+        - generic [ref=e1137]:
+          - generic [ref=e1140]: ش
+          - heading "عرفی" [level=3] [ref=e1141]
+          - generic [ref=e1142]: کلاسیک
+          - generic [ref=e1143]: 829 شعر
+      - link "ش عسجدی کلاسیک 95 شعر" [ref=e1144] [cursor=pointer]:
+        - /url: /poets/125
+        - generic [ref=e1145]:
+          - generic [ref=e1148]: ش
+          - heading "عسجدی" [level=3] [ref=e1149]
+          - generic [ref=e1150]: کلاسیک
+          - generic [ref=e1151]: 95 شعر
+      - link "ش عطار کلاسیک 5015 شعر" [ref=e1152] [cursor=pointer]:
+        - /url: /poets/9
+        - generic [ref=e1153]:
+          - generic [ref=e1156]: ش
+          - heading "عطار" [level=3] [ref=e1157]
+          - generic [ref=e1158]: کلاسیک
+          - generic [ref=e1159]: 5015 شعر
+      - link "ش عمان سامانی کلاسیک 73 شعر" [ref=e1160] [cursor=pointer]:
+        - /url: /poets/59
+        - generic [ref=e1161]:
+          - generic [ref=e1164]: ش
+          - heading "عمان سامانی" [level=3] [ref=e1165]
+          - generic [ref=e1166]: کلاسیک
+          - generic [ref=e1167]: 73 شعر
+      - link "ش عمعق بخاری کلاسیک 64 شعر" [ref=e1168] [cursor=pointer]:
+        - /url: /poets/136
+        - generic [ref=e1169]:
+          - generic [ref=e1172]: ش
+          - heading "عمعق بخاری" [level=3] [ref=e1173]
+          - generic [ref=e1174]: کلاسیک
+          - generic [ref=e1175]: 64 شعر
+      - link "ش عنصرالمعالی کلاسیک 45 شعر" [ref=e1176] [cursor=pointer]:
+        - /url: /poets/82
+        - generic [ref=e1177]:
+          - generic [ref=e1180]: ش
+          - heading "عنصرالمعالی" [level=3] [ref=e1181]
+          - generic [ref=e1182]: کلاسیک
+          - generic [ref=e1183]: 45 شعر
+      - link "ش عنصری کلاسیک 480 شعر" [ref=e1184] [cursor=pointer]:
+        - /url: /poets/62
+        - generic [ref=e1185]:
+          - generic [ref=e1188]: ش
+          - heading "عنصری" [level=3] [ref=e1189]
+          - generic [ref=e1190]: کلاسیک
+          - generic [ref=e1191]: 480 شعر
+      - link "ش عین‌القضات همدانی کلاسیک 212 شعر" [ref=e1192] [cursor=pointer]:
+        - /url: /poets/94
+        - generic [ref=e1193]:
+          - generic [ref=e1196]: ش
+          - heading "عین‌القضات همدانی" [level=3] [ref=e1197]
+          - generic [ref=e1198]: کلاسیک
+          - generic [ref=e1199]: 212 شعر
+      - link "ش عیوقی کلاسیک 46 شعر" [ref=e1200] [cursor=pointer]:
+        - /url: /poets/124
+        - generic [ref=e1201]:
+          - generic [ref=e1204]: ش
+          - heading "عیوقی" [level=3] [ref=e1205]
+          - generic [ref=e1206]: کلاسیک
+          - generic [ref=e1207]: 46 شعر
+      - link "ش غالب دهلوی کلاسیک 446 شعر" [ref=e1208] [cursor=pointer]:
+        - /url: /poets/123
+        - generic [ref=e1209]:
+          - generic [ref=e1212]: ش
+          - heading "غالب دهلوی" [level=3] [ref=e1213]
+          - generic [ref=e1214]: کلاسیک
+          - generic [ref=e1215]: 446 شعر
+      - link "ش غبار همدانی کلاسیک 112 شعر" [ref=e1216] [cursor=pointer]:
+        - /url: /poets/77
+        - generic [ref=e1217]:
+          - generic [ref=e1220]: ش
+          - heading "غبار همدانی" [level=3] [ref=e1221]
+          - generic [ref=e1222]: کلاسیک
+          - generic [ref=e1223]: 112 شعر
+      - link "ش غروی اصفهانی کلاسیک 226 شعر" [ref=e1224] [cursor=pointer]:
+        - /url: /poets/87
+        - generic [ref=e1225]:
+          - generic [ref=e1228]: ش
+          - heading "غروی اصفهانی" [level=3] [ref=e1229]
+          - generic [ref=e1230]: کلاسیک
+          - generic [ref=e1231]: 226 شعر
+      - link "ش غزالی کلاسیک 443 شعر" [ref=e1232] [cursor=pointer]:
+        - /url: /poets/160
+        - generic [ref=e1233]:
+          - generic [ref=e1236]: ش
+          - heading "غزالی" [level=3] [ref=e1237]
+          - generic [ref=e1238]: کلاسیک
+          - generic [ref=e1239]: 443 شعر
+      - link "ش فاضل نظری کلاسیک 15 شعر" [ref=e1240] [cursor=pointer]:
+        - /url: /poets/606
+        - generic [ref=e1241]:
+          - generic [ref=e1244]: ش
+          - heading "فاضل نظری" [level=3] [ref=e1245]
+          - generic [ref=e1246]: کلاسیک
+          - generic [ref=e1247]: 15 شعر
+      - link "ش فایز کلاسیک 638 شعر" [ref=e1248] [cursor=pointer]:
+        - /url: /poets/61
+        - generic [ref=e1249]:
+          - generic [ref=e1252]: ش
+          - heading "فایز" [level=3] [ref=e1253]
+          - generic [ref=e1254]: کلاسیک
+          - generic [ref=e1255]: 638 شعر
+      - link "ش فخرالدین اسعد گرگانی کلاسیک 113 شعر" [ref=e1256] [cursor=pointer]:
+        - /url: /poets/38
+        - generic [ref=e1257]:
+          - generic [ref=e1260]: ش
+          - heading "فخرالدین اسعد گرگانی" [level=3] [ref=e1261]
+          - generic [ref=e1262]: کلاسیک
+          - generic [ref=e1263]: 113 شعر
+      - link "ش فرخی سیستانی کلاسیک 338 شعر" [ref=e1264] [cursor=pointer]:
+        - /url: /poets/15
+        - generic [ref=e1265]:
+          - generic [ref=e1268]: ش
+          - heading "فرخی سیستانی" [level=3] [ref=e1269]
+          - generic [ref=e1270]: کلاسیک
+          - generic [ref=e1271]: 338 شعر
+      - link "ش فرخی یزدی کلاسیک 590 شعر" [ref=e1272] [cursor=pointer]:
+        - /url: /poets/134
+        - generic [ref=e1273]:
+          - generic [ref=e1276]: ش
+          - heading "فرخی یزدی" [level=3] [ref=e1277]
+          - generic [ref=e1278]: کلاسیک
+          - generic [ref=e1279]: 590 شعر
+      - link "ش فردوسی کلاسیک 778 شعر" [ref=e1280] [cursor=pointer]:
+        - /url: /poets/4
+        - generic [ref=e1281]:
+          - generic [ref=e1284]: ش
+          - heading "فردوسی" [level=3] [ref=e1285]
+          - generic [ref=e1286]: کلاسیک
+          - generic [ref=e1287]: 778 شعر
+      - link "ش فروغ فرخزاد کلاسیک 124 شعر" [ref=e1288] [cursor=pointer]:
+        - /url: /poets/504
+        - generic [ref=e1289]:
+          - generic [ref=e1292]: ش
+          - heading "فروغ فرخزاد" [level=3] [ref=e1293]
+          - generic [ref=e1294]: کلاسیک
+          - generic [ref=e1295]: 124 شعر
+      - link "ش فروغی بسطامی کلاسیک 551 شعر" [ref=e1296] [cursor=pointer]:
+        - /url: /poets/32
+        - generic [ref=e1297]:
+          - generic [ref=e1300]: ش
+          - heading "فروغی بسطامی" [level=3] [ref=e1301]
+          - generic [ref=e1302]: کلاسیک
+          - generic [ref=e1303]: 551 شعر
+      - link "ش فریدون مشیری کلاسیک 278 شعر" [ref=e1304] [cursor=pointer]:
+        - /url: /poets/513
+        - generic [ref=e1305]:
+          - generic [ref=e1308]: ش
+          - heading "فریدون مشیری" [level=3] [ref=e1309]
+          - generic [ref=e1310]: کلاسیک
+          - generic [ref=e1311]: 278 شعر
+      - link "ش فصیحی هروی کلاسیک 543 شعر" [ref=e1312] [cursor=pointer]:
+        - /url: /poets/185
+        - generic [ref=e1313]:
+          - generic [ref=e1316]: ش
+          - heading "فصیحی هروی" [level=3] [ref=e1317]
+          - generic [ref=e1318]: کلاسیک
+          - generic [ref=e1319]: 543 شعر
+      - link "ش فضولی کلاسیک 630 شعر" [ref=e1320] [cursor=pointer]:
+        - /url: /poets/145
+        - generic [ref=e1321]:
+          - generic [ref=e1324]: ش
+          - heading "فضولی" [level=3] [ref=e1325]
+          - generic [ref=e1326]: کلاسیک
+          - generic [ref=e1327]: 630 شعر
+      - link "ش فلکی شروانی کلاسیک 69 شعر" [ref=e1328] [cursor=pointer]:
+        - /url: /poets/141
+        - generic [ref=e1329]:
+          - generic [ref=e1332]: ش
+          - heading "فلکی شروانی" [level=3] [ref=e1333]
+          - generic [ref=e1334]: کلاسیک
+          - generic [ref=e1335]: 69 شعر
+      - link "ش فیاض لاهیجی کلاسیک 937 شعر" [ref=e1336] [cursor=pointer]:
+        - /url: /poets/172
+        - generic [ref=e1337]:
+          - generic [ref=e1340]: ش
+          - heading "فیاض لاهیجی" [level=3] [ref=e1341]
+          - generic [ref=e1342]: کلاسیک
+          - generic [ref=e1343]: 937 شعر
+      - link "ش فیض کاشانی کلاسیک 1188 شعر" [ref=e1344] [cursor=pointer]:
+        - /url: /poets/39
+        - generic [ref=e1345]:
+          - generic [ref=e1348]: ش
+          - heading "فیض کاشانی" [level=3] [ref=e1349]
+          - generic [ref=e1350]: کلاسیک
+          - generic [ref=e1351]: 1188 شعر
+      - link "ش قاآنی کلاسیک 625 شعر" [ref=e1352] [cursor=pointer]:
+        - /url: /poets/44
+        - generic [ref=e1353]:
+          - generic [ref=e1356]: ش
+          - heading "قاآنی" [level=3] [ref=e1357]
+          - generic [ref=e1358]: کلاسیک
+          - generic [ref=e1359]: 625 شعر
+      - link "ش قائم مقام فراهانی کلاسیک 257 شعر" [ref=e1360] [cursor=pointer]:
+        - /url: /poets/98
+        - generic [ref=e1361]:
+          - generic [ref=e1364]: ش
+          - heading "قائم مقام فراهانی" [level=3] [ref=e1365]
+          - generic [ref=e1366]: کلاسیک
+          - generic [ref=e1367]: 257 شعر
+      - link "ش قاسم انوار کلاسیک 829 شعر" [ref=e1368] [cursor=pointer]:
+        - /url: /poets/129
+        - generic [ref=e1369]:
+          - generic [ref=e1372]: ش
+          - heading "قاسم انوار" [level=3] [ref=e1373]
+          - generic [ref=e1374]: کلاسیک
+          - generic [ref=e1375]: 829 شعر
+      - link "ش قدسی مشهدی کلاسیک 1219 شعر" [ref=e1376] [cursor=pointer]:
+        - /url: /poets/71
+        - generic [ref=e1377]:
+          - generic [ref=e1380]: ش
+          - heading "قدسی مشهدی" [level=3] [ref=e1381]
+          - generic [ref=e1382]: کلاسیک
+          - generic [ref=e1383]: 1219 شعر
+      - link "ش قرآن کریم کلاسیک 114 شعر" [ref=e1384] [cursor=pointer]:
+        - /url: /poets/999
+        - generic [ref=e1385]:
+          - generic [ref=e1388]: ش
+          - heading "قرآن کریم" [level=3] [ref=e1389]
+          - generic [ref=e1390]: کلاسیک
+          - generic [ref=e1391]: 114 شعر
+      - link "ش قصاب کاشانی کلاسیک 356 شعر" [ref=e1392] [cursor=pointer]:
+        - /url: /poets/86
+        - generic [ref=e1393]:
+          - generic [ref=e1396]: ش
+          - heading "قصاب کاشانی" [level=3] [ref=e1397]
+          - generic [ref=e1398]: کلاسیک
+          - generic [ref=e1399]: 356 شعر
+      - link "ش قطران تبریزی کلاسیک 526 شعر" [ref=e1400] [cursor=pointer]:
+        - /url: /poets/142
+        - generic [ref=e1401]:
+          - generic [ref=e1404]: ش
+          - heading "قطران تبریزی" [level=3] [ref=e1405]
+          - generic [ref=e1406]: کلاسیک
+          - generic [ref=e1407]: 526 شعر
+      - link "ش قوامی رازی کلاسیک 120 شعر" [ref=e1408] [cursor=pointer]:
+        - /url: /poets/179
+        - generic [ref=e1409]:
+          - generic [ref=e1412]: ش
+          - heading "قوامی رازی" [level=3] [ref=e1413]
+          - generic [ref=e1414]: کلاسیک
+          - generic [ref=e1415]: 120 شعر
+      - link "ش کارو کلاسیک 49 شعر" [ref=e1416] [cursor=pointer]:
+        - /url: /poets/609
+        - generic [ref=e1417]:
+          - generic [ref=e1420]: ش
+          - heading "کارو" [level=3] [ref=e1421]
+          - generic [ref=e1422]: کلاسیک
+          - generic [ref=e1423]: 49 شعر
+      - link "ش کامبیز صدیقی کسمایی کلاسیک 181 شعر" [ref=e1424] [cursor=pointer]:
+        - /url: /poets/611
+        - generic [ref=e1425]:
+          - generic [ref=e1428]: ش
+          - heading "کامبیز صدیقی کسمایی" [level=3] [ref=e1429]
+          - generic [ref=e1430]: کلاسیک
+          - generic [ref=e1431]: 181 شعر
+      - link "ش کاوه سوخک لاری (شکیب) کلاسیک 35 شعر" [ref=e1432] [cursor=pointer]:
+        - /url: /poets/623
+        - generic [ref=e1433]:
+          - generic [ref=e1436]: ش
+          - heading "کاوه سوخک لاری (شکیب)" [level=3] [ref=e1437]
+          - generic [ref=e1438]: کلاسیک
+          - generic [ref=e1439]: 35 شعر
+      - link "ش کسایی کلاسیک 115 شعر" [ref=e1440] [cursor=pointer]:
+        - /url: /poets/45
+        - generic [ref=e1441]:
+          - generic [ref=e1444]: ش
+          - heading "کسایی" [level=3] [ref=e1445]
+          - generic [ref=e1446]: کلاسیک
+          - generic [ref=e1447]: 115 شعر
+      - link "ش کلیم کلاسیک 747 شعر" [ref=e1448] [cursor=pointer]:
+        - /url: /poets/100
+        - generic [ref=e1449]:
+          - generic [ref=e1452]: ش
+          - heading "کلیم" [level=3] [ref=e1453]
+          - generic [ref=e1454]: کلاسیک
+          - generic [ref=e1455]: 747 شعر
+      - link "ش کمال‌الدین اسماعیل کلاسیک 1618 شعر" [ref=e1456] [cursor=pointer]:
+        - /url: /poets/67
+        - generic [ref=e1457]:
+          - generic [ref=e1460]: ش
+          - heading "کمال‌الدین اسماعیل" [level=3] [ref=e1461]
+          - generic [ref=e1462]: کلاسیک
+          - generic [ref=e1463]: 1618 شعر
+      - link "ش کمال خجندی کلاسیک 1252 شعر" [ref=e1464] [cursor=pointer]:
+        - /url: /poets/73
+        - generic [ref=e1465]:
+          - generic [ref=e1468]: ش
+          - heading "کمال خجندی" [level=3] [ref=e1469]
+          - generic [ref=e1470]: کلاسیک
+          - generic [ref=e1471]: 1252 شعر
+      - link "ش کوهی کلاسیک 235 شعر" [ref=e1472] [cursor=pointer]:
+        - /url: /poets/171
+        - generic [ref=e1473]:
+          - generic [ref=e1476]: ش
+          - heading "کوهی" [level=3] [ref=e1477]
+          - generic [ref=e1478]: کلاسیک
+          - generic [ref=e1479]: 235 شعر
+      - link "ش لبیبی کلاسیک 118 شعر" [ref=e1480] [cursor=pointer]:
+        - /url: /poets/180
+        - generic [ref=e1481]:
+          - generic [ref=e1484]: ش
+          - heading "لبیبی" [level=3] [ref=e1485]
+          - generic [ref=e1486]: کلاسیک
+          - generic [ref=e1487]: 118 شعر
+      - link "ش مجد همگر کلاسیک 855 شعر" [ref=e1488] [cursor=pointer]:
+        - /url: /poets/152
+        - generic [ref=e1489]:
+          - generic [ref=e1492]: ش
+          - heading "مجد همگر" [level=3] [ref=e1493]
+          - generic [ref=e1494]: کلاسیک
+          - generic [ref=e1495]: 855 شعر
+      - link "ش مجیرالدین بیلقانی کلاسیک 506 شعر" [ref=e1496] [cursor=pointer]:
+        - /url: /poets/140
+        - generic [ref=e1497]:
+          - generic [ref=e1500]: ش
+          - heading "مجیرالدین بیلقانی" [level=3] [ref=e1501]
+          - generic [ref=e1502]: کلاسیک
+          - generic [ref=e1503]: 506 شعر
+      - link "ش محتشم کاشانی کلاسیک 972 شعر" [ref=e1504] [cursor=pointer]:
+        - /url: /poets/29
+        - generic [ref=e1505]:
+          - generic [ref=e1508]: ش
+          - heading "محتشم کاشانی" [level=3] [ref=e1509]
+          - generic [ref=e1510]: کلاسیک
+          - generic [ref=e1511]: 972 شعر
+      - link "ش محمد بن منور کلاسیک 477 شعر" [ref=e1512] [cursor=pointer]:
+        - /url: /poets/96
+        - generic [ref=e1513]:
+          - generic [ref=e1516]: ش
+          - heading "محمد بن منور" [level=3] [ref=e1517]
+          - generic [ref=e1518]: کلاسیک
+          - generic [ref=e1519]: 477 شعر
+      - link "ش محمدحسن بارق شفیعی کلاسیک 48 شعر" [ref=e1520] [cursor=pointer]:
+        - /url: /poets/508
+        - generic [ref=e1521]:
+          - generic [ref=e1524]: ش
+          - heading "محمدحسن بارق شفیعی" [level=3] [ref=e1525]
+          - generic [ref=e1526]: کلاسیک
+          - generic [ref=e1527]: 48 شعر
+      - link "ش محمدرضا شفیعی کدکنی کلاسیک 214 شعر" [ref=e1528] [cursor=pointer]:
+        - /url: /poets/516
+        - generic [ref=e1529]:
+          - generic [ref=e1532]: ش
+          - heading "محمدرضا شفیعی کدکنی" [level=3] [ref=e1533]
+          - generic [ref=e1534]: کلاسیک
+          - generic [ref=e1535]: 214 شعر
+      - link "ش محمدعلی بهمنی کلاسیک 28 شعر" [ref=e1536] [cursor=pointer]:
+        - /url: /poets/510
+        - generic [ref=e1537]:
+          - generic [ref=e1540]: ش
+          - heading "محمدعلی بهمنی" [level=3] [ref=e1541]
+          - generic [ref=e1542]: کلاسیک
+          - generic [ref=e1543]: 28 شعر
+      - link "ش محمد کوسج کلاسیک 33 شعر" [ref=e1544] [cursor=pointer]:
+        - /url: /poets/159
+        - generic [ref=e1545]:
+          - generic [ref=e1548]: ش
+          - heading "محمد کوسج" [level=3] [ref=e1549]
+          - generic [ref=e1550]: کلاسیک
+          - generic [ref=e1551]: 33 شعر
+      - link "ش محیط قمی کلاسیک 139 شعر" [ref=e1552] [cursor=pointer]:
+        - /url: /poets/113
+        - generic [ref=e1553]:
+          - generic [ref=e1556]: ش
+          - heading "محیط قمی" [level=3] [ref=e1557]
+          - generic [ref=e1558]: کلاسیک
+          - generic [ref=e1559]: 139 شعر
+      - link "ش مسعود سعد سلمان کلاسیک 1053 شعر" [ref=e1560] [cursor=pointer]:
+        - /url: /poets/17
+        - generic [ref=e1561]:
+          - generic [ref=e1564]: ش
+          - heading "مسعود سعد سلمان" [level=3] [ref=e1565]
+          - generic [ref=e1566]: کلاسیک
+          - generic [ref=e1567]: 1053 شعر
+      - link "ش مشتاق اصفهانی کلاسیک 616 شعر" [ref=e1568] [cursor=pointer]:
+        - /url: /poets/154
+        - generic [ref=e1569]:
+          - generic [ref=e1572]: ش
+          - heading "مشتاق اصفهانی" [level=3] [ref=e1573]
+          - generic [ref=e1574]: کلاسیک
+          - generic [ref=e1575]: 616 شعر
+      - link "ش مصطفی مجیدی کلاسیک 10 شعر" [ref=e1576] [cursor=pointer]:
+        - /url: /poets/617
+        - generic [ref=e1577]:
+          - generic [ref=e1580]: ش
+          - heading "مصطفی مجیدی" [level=3] [ref=e1581]
+          - generic [ref=e1582]: کلاسیک
+          - generic [ref=e1583]: 10 شعر
+      - link "ش ملا احمد نراقی کلاسیک 647 شعر" [ref=e1584] [cursor=pointer]:
+        - /url: /poets/132
+        - generic [ref=e1585]:
+          - generic [ref=e1588]: ش
+          - heading "ملا احمد نراقی" [level=3] [ref=e1589]
+          - generic [ref=e1590]: کلاسیک
+          - generic [ref=e1591]: 647 شعر
+      - link "ش ملا مسیح کلاسیک 122 شعر" [ref=e1592] [cursor=pointer]:
+        - /url: /poets/90
+        - generic [ref=e1593]:
+          - generic [ref=e1596]: ش
+          - heading "ملا مسیح" [level=3] [ref=e1597]
+          - generic [ref=e1598]: کلاسیک
+          - generic [ref=e1599]: 122 شعر
+      - link "ش ملک‌الشعرا بهار کلاسیک 1042 شعر" [ref=e1600] [cursor=pointer]:
+        - /url: /poets/27
+        - generic [ref=e1601]:
+          - generic [ref=e1604]: ش
+          - heading "ملک‌الشعرا بهار" [level=3] [ref=e1605]
+          - generic [ref=e1606]: کلاسیک
+          - generic [ref=e1607]: 1042 شعر
+      - link "ش منوچهری کلاسیک 110 شعر" [ref=e1608] [cursor=pointer]:
+        - /url: /poets/14
+        - generic [ref=e1609]:
+          - generic [ref=e1612]: ش
+          - heading "منوچهری" [level=3] [ref=e1613]
+          - generic [ref=e1614]: کلاسیک
+          - generic [ref=e1615]: 110 شعر
+    - paragraph [ref=e1617]: گنجور - پلتفرم جامع اشعار فارسی
+  - button "Open Next.js Dev Tools" [ref=e1623] [cursor=pointer]:
+    - img [ref=e1624]
+  - alert [ref=e1627]
+```
